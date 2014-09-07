@@ -1,0 +1,7 @@
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/kawakami/.gitignore
+[user]
+	name = chucker34
+	email = kawakami34@gmail.com

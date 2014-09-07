@@ -1127,6 +1127,7 @@ unite-filter-matcher_glob	unite.txt	/*unite-filter-matcher_glob*
 unite-filter-matcher_hide_hidden_files	unite.txt	/*unite-filter-matcher_hide_hidden_files*
 unite-filter-matcher_migemo	unite.txt	/*unite-filter-matcher_migemo*
 unite-filter-matcher_project_files	unite.txt	/*unite-filter-matcher_project_files*
+unite-filter-matcher_project_ignore_files	unite.txt	/*unite-filter-matcher_project_ignore_files*
 unite-filter-matcher_regexp	unite.txt	/*unite-filter-matcher_regexp*
 unite-filter-sorter_default	unite.txt	/*unite-filter-sorter_default*
 unite-filter-sorter_ftime	unite.txt	/*unite-filter-sorter_ftime*

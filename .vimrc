@@ -4,6 +4,7 @@ set termencoding=utf-8
 set fileencoding=utf-8
 
 set backspace=indent,eol,start
+set nobackup
 
 " 画面表示の設定
 set number         "行番号を表示する
@@ -95,6 +96,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails.git'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'candy.vim'
 
 "コード補完の設定
 "let g:neosnippet#snippets_directory='~/.vim/bundle/snippets/ruby_snip/*.snip'
@@ -148,10 +150,11 @@ set background=dark
 "colorscheme molokai
 "let g:hybrid_use_Xresources = 1
 "colorscheme hybrid
-"colorscheme badwolf
-"colorscheme Tomorrow-Night-Bright
+""colorscheme badwolf
+""colorscheme Tomorrow-Night-Blue
 colorscheme gruvbox
-"colorscheme solarized
+""colorscheme candy
+""colorscheme solarized
 syntax enable
 
 "オートコマンド

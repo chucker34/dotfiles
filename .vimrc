@@ -138,13 +138,15 @@ map <C-n> :NERDTreeToggle<Cr>
 map <C-s-h> :VimShell<Cr>
 map <C-m> :vsplit<Cr>
 map <Esc><Esc> :w<CR>
+map <Esc> :noh<CR>
 imap <C-e> <esc>
 nnoremap tn :<C-u>tabnew<CR>
 set pastetoggle=<F10>
 
 "カラーテーマ
+syntax enable
 set background=dark
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 "let g:rehash256 = 1
 "let g:molokai_original = 0
 "colorscheme molokai
@@ -155,7 +157,6 @@ set background=dark
 colorscheme gruvbox
 ""colorscheme candy
 ""colorscheme solarized
-syntax enable
 
 "オートコマンド
 autocmd User Rails.view*                 NeoSnippetSource ~/.vim/snippet/ruby.rails.view.snip

@@ -135,11 +135,10 @@ NeoBundleCheck
 
 "ショートカット
 map <C-n> :NERDTreeToggle<Cr>
-map <C-s-h> :VimShell<Cr>
-map <C-m> :vsplit<Cr>
-map <Esc><Esc> :w<CR>
-map <Esc> :noh<CR>
-imap <C-e> <esc>
+nnoremap sh :VimShell<Cr>
+nnoremap vs :vsplit<Cr>
+map <Esc> :w<CR>
+map <C-e> :noh<CR>
 nnoremap tn :<C-u>tabnew<CR>
 set pastetoggle=<F10>
 
@@ -151,9 +150,10 @@ let g:solarized_termcolors=256
 "let g:molokai_original = 0
 "colorscheme molokai
 "let g:hybrid_use_Xresources = 1
-"colorscheme hybrid
+""colorscheme hybrid
+""colorscheme jellybeans
 ""colorscheme badwolf
-""colorscheme Tomorrow-Night-Blue
+""colorscheme Tomorrow-Nigh
 colorscheme gruvbox
 ""colorscheme candy
 ""colorscheme solarized

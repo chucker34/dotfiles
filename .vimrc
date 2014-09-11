@@ -146,6 +146,8 @@ set pastetoggle=<F10>
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
+let g:solarized_contrast = "high"
+let g:solarized_degrade = 0
 "let g:rehash256 = 1
 "let g:molokai_original = 0
 "colorscheme molokai
@@ -154,9 +156,13 @@ let g:solarized_termcolors=256
 ""colorscheme jellybeans
 ""colorscheme badwolf
 ""colorscheme Tomorrow-Nigh
-colorscheme gruvbox
+""colorscheme gruvbox
 ""colorscheme candy
-""colorscheme solarized
+colorscheme solarized
+
+"Nerdtree設定
+let NERDTreeShowHidden = 1
+autocmd VimEnter * execute 'NERDTree'
 
 "オートコマンド
 autocmd User Rails.view*                 NeoSnippetSource ~/.vim/snippet/ruby.rails.view.snip

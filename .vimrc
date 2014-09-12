@@ -73,6 +73,7 @@ NeoBundle 'morhetz/gruvbox'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'sjl/badwolf'
+NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/neobundle.vim'
@@ -152,13 +153,15 @@ let g:solarized_degrade = 0
 "let g:molokai_original = 0
 "colorscheme molokai
 "let g:hybrid_use_Xresources = 1
-""colorscheme hybrid
+""colorscheme molokai
+colorscheme hybrid
 ""colorscheme jellybeans
 ""colorscheme badwolf
-""colorscheme Tomorrow-Nigh
+""colorscheme Tomorrow-Night
 ""colorscheme gruvbox
 ""colorscheme candy
-colorscheme solarized
+""colorscheme solarized
+""colorscheme codeschool
 
 "Nerdtree設定
 let NERDTreeShowHidden = 1

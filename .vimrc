@@ -1,3 +1,4 @@
+set nocompatible
 "文字コード
 set encoding=utf-8
 set termencoding=utf-8
@@ -58,7 +59,6 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 "バンドル管理
 "Vi互換OFF
-set nocompatible
 filetype off
 if has('vim_starting')
 set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -73,8 +73,10 @@ NeoBundle 'morhetz/gruvbox'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'sjl/badwolf'
+NeoBundle 'jonathanfilip/vim-lucius'
 NeoBundle '29decibel/codeschool-vim-theme'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
+NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
@@ -140,7 +142,7 @@ nnoremap sh :VimShell<Cr>
 nnoremap vs :vsplit<Cr>
 map <Esc> :w<CR>
 map <C-e> :noh<CR>
-nnoremap tn :<C-u>tabnew<CR>
+nnoremap tn :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<F10>
 
 "カラーテーマ
@@ -154,14 +156,16 @@ let g:solarized_degrade = 0
 "colorscheme molokai
 "let g:hybrid_use_Xresources = 1
 ""colorscheme molokai
-colorscheme hybrid
+""colorscheme hybrid
 ""colorscheme jellybeans
-""colorscheme badwolf
+colorscheme badwolf
 ""colorscheme Tomorrow-Night
 ""colorscheme gruvbox
 ""colorscheme candy
 ""colorscheme solarized
 ""colorscheme codeschool
+""colorscheme railscasts
+""colorscheme lucius
 
 "Nerdtree設定
 let NERDTreeShowHidden = 1
@@ -185,3 +189,17 @@ augroup Close
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
 augroup END
+
+map <Up> <Nop>
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap ^[OA <Up>
+inoremap ^[OB <Down>
+inoremap ^[OC <Right>
+inoremap ^[OD <Left>
+

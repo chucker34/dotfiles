@@ -15,7 +15,9 @@ unite.vim
 vim-colors-solarized
 vim-endwise
 vim-hybrid
+vim-lucius
 vim-rails
+vim-railscasts-theme
 vim-rspec
 vim-ruby
 vim-surround

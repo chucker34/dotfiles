@@ -1,4 +1,6 @@
 set nocompatible
+set clipboard+=autoselect "クリップボードを使う
+set clipboard+=unnamed
 "文字コード
 set encoding=utf-8
 set termencoding=utf-8

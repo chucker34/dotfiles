@@ -144,8 +144,10 @@ nnoremap sh :VimShell<Cr>
 nnoremap vs :vsplit<Cr>
 map <Esc> :w<CR>
 map <C-e> :noh<CR>
-nnoremap tn :<C-u>tabnew<CR>:NERDTreeToggle<CR>
+nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<F10>
+"NERDTreeとウィンドウを閉じる
+map <C-t><C-t> :q<CR>:q<CR>
 
 "カラーテーマ
 syntax enable

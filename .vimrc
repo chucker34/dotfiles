@@ -102,6 +102,9 @@ NeoBundle 'tpope/vim-rails.git'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'candy.vim'
+"swift
+NeoBundle 'toyamarinyon/vim-swift'
+"NeoBundle 'Keithbsmiley/swift.vim'
 
 "コード補完の設定
 "let g:neosnippet#snippets_directory='~/.vim/bundle/snippets/ruby_snip/*.snip'
@@ -148,6 +151,11 @@ nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<F10>
 "NERDTreeとウィンドウを閉じる
 map <C-t><C-t> :q<CR>:q<CR>
+" 挿入モードでのカーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 
 "カラーテーマ
 syntax enable
@@ -160,13 +168,13 @@ let g:solarized_degrade = 0
 "colorscheme molokai
 "let g:hybrid_use_Xresources = 1
 ""colorscheme molokai
-""colorscheme hybrid
+"colorscheme hybrid
 ""colorscheme jellybeans
-colorscheme badwolf
-""colorscheme Tomorrow-Night
-""colorscheme gruvbox
+"colorscheme badwolf
+"colorscheme Tomorrow-Night
+"colorscheme gruvbox
 ""colorscheme candy
-""colorscheme solarized
+colorscheme solarized
 ""colorscheme codeschool
 ""colorscheme railscasts
 ""colorscheme lucius
@@ -193,17 +201,4 @@ augroup Close
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
 augroup END
-
-map <Up> <Nop>
-map <Down> <Nop>
-map <Left> <Nop>
-map <Right> <Nop>
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-inoremap ^[OA <Up>
-inoremap ^[OB <Down>
-inoremap ^[OC <Right>
-inoremap ^[OD <Left>
 

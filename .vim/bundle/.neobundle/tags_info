@@ -11,6 +11,7 @@ neosnippet
 neosnippet-snippets
 nerdtree
 rspec.vim
+swift.vim
 unite.vim
 vim-colors-solarized
 vim-endwise
@@ -21,6 +22,7 @@ vim-railscasts-theme
 vim-rspec
 vim-ruby
 vim-surround
+vim-swift
 vim-tomorrow-theme
 vimfiler
 vimproc

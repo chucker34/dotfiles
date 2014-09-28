@@ -170,11 +170,11 @@ let g:solarized_degrade = 0
 ""colorscheme molokai
 "colorscheme hybrid
 ""colorscheme jellybeans
-"colorscheme badwolf
+colorscheme badwolf
 "colorscheme Tomorrow-Night
 "colorscheme gruvbox
 ""colorscheme candy
-colorscheme solarized
+""colorscheme solarized
 ""colorscheme codeschool
 ""colorscheme railscasts
 ""colorscheme lucius

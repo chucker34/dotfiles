@@ -1,6 +1,8 @@
 set nocompatible
 set clipboard+=autoselect "クリップボードを使う
 set clipboard+=unnamed
+
+set invnumber
 "文字コード
 set encoding=utf-8
 set termencoding=utf-8
@@ -63,11 +65,14 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 "Vi互換OFF
 filetype off
 if has('vim_starting')
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  call neobundle#end()
 endif
 
 "プラグイン
+NeoBundle 'cocopon/iceberg.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle '844196/lightline-badwolf.vim'
@@ -105,6 +110,7 @@ NeoBundle 'candy.vim'
 "swift
 NeoBundle 'toyamarinyon/vim-swift'
 "NeoBundle 'Keithbsmiley/swift.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 
 "コード補完の設定
 "let g:neosnippet#snippets_directory='~/.vim/bundle/snippets/ruby_snip/*.snip'
@@ -145,11 +151,15 @@ NeoBundleCheck
 map <C-n> :NERDTreeToggle<Cr>
 nnoremap sh :VimShell<Cr>
 nnoremap vs :vsplit<Cr>
+"カット実行
+map <C-d> d's
+"ヤンクを実行
+map <C-y> y's
 map <Esc> :w<CR>
 map <C-e> :noh<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<F10>
-"NERDTreeとウィンドウを閉じる
+"ウィンドウを２つ閉じる
 map <C-t><C-t> :q<CR>:q<CR>
 " 挿入モードでのカーソル移動
 inoremap <C-j> <Down>
@@ -170,14 +180,15 @@ let g:solarized_degrade = 0
 ""colorscheme molokai
 "colorscheme hybrid
 ""colorscheme jellybeans
-colorscheme badwolf
+""colorscheme badwolf
 "colorscheme Tomorrow-Night
-"colorscheme gruvbox
+""colorscheme gruvbox
 ""colorscheme candy
 ""colorscheme solarized
 ""colorscheme codeschool
 ""colorscheme railscasts
 ""colorscheme lucius
+colorscheme iceberg
 
 "Nerdtree設定
 let NERDTreeShowHidden = 1

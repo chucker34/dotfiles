@@ -2,6 +2,7 @@ badwolf
 candy.vim
 codeschool-vim-theme
 gruvbox
+iceberg.vim
 jellybeans.vim
 lightline-badwolf.vim
 molokai
@@ -12,6 +13,7 @@ neosnippet-snippets
 nerdtree
 rspec.vim
 unite.vim
+vim-coffee-script
 vim-colors-solarized
 vim-endwise
 vim-hybrid

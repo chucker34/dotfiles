@@ -170,6 +170,7 @@
 <Plug>(vimfiler_cd)	vimfiler.txt	/*<Plug>(vimfiler_cd)*
 <Plug>(vimfiler_cd_file)	vimfiler.txt	/*<Plug>(vimfiler_cd_file)*
 <Plug>(vimfiler_cd_input_directory)	vimfiler.txt	/*<Plug>(vimfiler_cd_input_directory)*
+<Plug>(vimfiler_cd_or_edit)	vimfiler.txt	/*<Plug>(vimfiler_cd_or_edit)*
 <Plug>(vimfiler_cd_vim_current_dir)	vimfiler.txt	/*<Plug>(vimfiler_cd_vim_current_dir)*
 <Plug>(vimfiler_choose_action)	vimfiler.txt	/*<Plug>(vimfiler_choose_action)*
 <Plug>(vimfiler_clear_mark_all_lines)	vimfiler.txt	/*<Plug>(vimfiler_clear_mark_all_lines)*
@@ -183,13 +184,13 @@
 <Plug>(vimfiler_double_click)	vimfiler.txt	/*<Plug>(vimfiler_double_click)*
 <Plug>(vimfiler_edit_binary_file)	vimfiler.txt	/*<Plug>(vimfiler_edit_binary_file)*
 <Plug>(vimfiler_edit_file)	vimfiler.txt	/*<Plug>(vimfiler_edit_file)*
-<Plug>(vimfiler_execute)	vimfiler.txt	/*<Plug>(vimfiler_execute)*
 <Plug>(vimfiler_execute_external_filer)	vimfiler.txt	/*<Plug>(vimfiler_execute_external_filer)*
 <Plug>(vimfiler_execute_file)	vimfiler.txt	/*<Plug>(vimfiler_execute_file)*
 <Plug>(vimfiler_execute_shell_command)	vimfiler.txt	/*<Plug>(vimfiler_execute_shell_command)*
 <Plug>(vimfiler_execute_system_associated)	vimfiler.txt	/*<Plug>(vimfiler_execute_system_associated)*
 <Plug>(vimfiler_execute_vimfiler_associated)	vimfiler.txt	/*<Plug>(vimfiler_execute_vimfiler_associated)*
 <Plug>(vimfiler_exit)	vimfiler.txt	/*<Plug>(vimfiler_exit)*
+<Plug>(vimfiler_expand_or_edit)	vimfiler.txt	/*<Plug>(vimfiler_expand_or_edit)*
 <Plug>(vimfiler_expand_tree)	vimfiler.txt	/*<Plug>(vimfiler_expand_tree)*
 <Plug>(vimfiler_expand_tree_recursive)	vimfiler.txt	/*<Plug>(vimfiler_expand_tree_recursive)*
 <Plug>(vimfiler_find)	vimfiler.txt	/*<Plug>(vimfiler_find)*
@@ -1196,6 +1197,7 @@ unite-options-here	unite.txt	/*unite-options-here*
 unite-options-hide-source-names	unite.txt	/*unite-options-hide-source-names*
 unite-options-hide-status-line	unite.txt	/*unite-options-hide-status-line*
 unite-options-horizontal	unite.txt	/*unite-options-horizontal*
+unite-options-ignorecase	unite.txt	/*unite-options-ignorecase*
 unite-options-immediately	unite.txt	/*unite-options-immediately*
 unite-options-input	unite.txt	/*unite-options-input*
 unite-options-keep-focus	unite.txt	/*unite-options-keep-focus*
@@ -1216,10 +1218,12 @@ unite-options-prompt	unite.txt	/*unite-options-prompt*
 unite-options-prompt-direction	unite.txt	/*unite-options-prompt-direction*
 unite-options-prompt-visible	unite.txt	/*unite-options-prompt-visible*
 unite-options-quick-match	unite.txt	/*unite-options-quick-match*
+unite-options-restore	unite.txt	/*unite-options-restore*
 unite-options-resume	unite.txt	/*unite-options-resume*
 unite-options-select	unite.txt	/*unite-options-select*
 unite-options-short-source-names	unite.txt	/*unite-options-short-source-names*
 unite-options-silent	unite.txt	/*unite-options-silent*
+unite-options-smartcase	unite.txt	/*unite-options-smartcase*
 unite-options-start-insert	unite.txt	/*unite-options-start-insert*
 unite-options-sync	unite.txt	/*unite-options-sync*
 unite-options-tab	unite.txt	/*unite-options-tab*
@@ -1229,6 +1233,7 @@ unite-options-unique	unite.txt	/*unite-options-unique*
 unite-options-update-time	unite.txt	/*unite-options-update-time*
 unite-options-verbose	unite.txt	/*unite-options-verbose*
 unite-options-vertical	unite.txt	/*unite-options-vertical*
+unite-options-vertical-preview	unite.txt	/*unite-options-vertical-preview*
 unite-options-winheight	unite.txt	/*unite-options-winheight*
 unite-options-winwidth	unite.txt	/*unite-options-winwidth*
 unite-options-wipe	unite.txt	/*unite-options-wipe*

@@ -178,7 +178,7 @@ let g:solarized_degrade = 0
 "colorscheme molokai
 "let g:hybrid_use_Xresources = 1
 ""colorscheme molokai
-"colorscheme hybrid
+""colorscheme hybrid
 ""colorscheme jellybeans
 ""colorscheme badwolf
 "colorscheme Tomorrow-Night

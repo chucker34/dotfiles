@@ -1,8 +1,6 @@
 set nocompatible
 set clipboard+=autoselect "クリップボードを使う
 set clipboard+=unnamed
-
-set invnumber
 "文字コード
 set encoding=utf-8
 set termencoding=utf-8
@@ -43,6 +41,8 @@ set autoread   "外部でファイルに変更がされた場合は読みなお�
 set noswapfile "ファイル編集中にスワップファイルを作らない
 set confirm    "保存されていないファイルがあるときは終了前に保存確認
 set imdisable  "IMEオフ
+
+set mouse+=a
 
 "記号補完
 inoremap { {}<LEFT>

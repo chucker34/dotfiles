@@ -42,7 +42,7 @@ set noswapfile "ファイル編集中にスワップファイルを作らない
 set confirm    "保存されていないファイルがあるときは終了前に保存確認
 set imdisable  "IMEオフ
 
-set mouse+=a
+"set mouse+=a
 
 "記号補完
 inoremap { {}<LEFT>
@@ -72,6 +72,7 @@ if has('vim_starting')
 endif
 
 "プラグイン
+NeoBundle 'osyo-manga/vim-sound'
 NeoBundle 'cocopon/iceberg.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'nanotech/jellybeans.vim'

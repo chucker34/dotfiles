@@ -203,6 +203,8 @@ autocmd User Rails/config/routes.rb      NeoSnippetSource ~/.vim/snippet/ruby.ra
 
 autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
 autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
+" add jbuilder syntax highlighting
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
 "autocmd FileType ruby compiler ruby
 "autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby

@@ -1,3 +1,4 @@
+syntax on
 set nocompatible
 set clipboard+=autoselect "クリップボードを使う
 set clipboard+=unnamed
@@ -72,6 +73,7 @@ if has('vim_starting')
 endif
 
 "プラグイン
+NeoBundle 'nginx.vim'
 NeoBundle 'osyo-manga/vim-sound'
 NeoBundle 'cocopon/iceberg.vim'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -205,6 +207,7 @@ autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
 autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
 " add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 
 "autocmd FileType ruby compiler ruby
 "autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby

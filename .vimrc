@@ -1,4 +1,3 @@
-syntax on
 set nocompatible
 set clipboard+=autoselect "クリップボードを使う
 set clipboard+=unnamed
@@ -37,13 +36,11 @@ set smartcase  "大文字と小文字が混在した言葉で検索を行った�
 set wrapscan   "最後尾まで検索を終えたら次の検索で先頭に移る
 set gdefault   "置換の時 g オプションをデフォルトで有効にする
 
-"ファイル関連"
+"ファイル関連
 set autoread   "外部でファイルに変更がされた場合は読みなおす
 set noswapfile "ファイル編集中にスワップファイルを作らない
 set confirm    "保存されていないファイルがあるときは終了前に保存確認
 set imdisable  "IMEオフ
-
-"set mouse+=a
 
 "記号補完
 inoremap { {}<LEFT>

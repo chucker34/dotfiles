@@ -72,6 +72,7 @@ if has('vim_starting')
 endif
 
 "プラグイン
+NeoBundle 'sudo.vim'
 NeoBundle 'osyo-manga/vim-sound'
 NeoBundle 'cocopon/iceberg.vim'
 NeoBundle 'altercation/vim-colors-solarized'

@@ -15,4 +15,4 @@ fi
 # Finished adapting your PATH environment variable for use with MacPorts.
 export PATH=/usr/local/bin:$PATH
 eval "$(rbenv init -)"
-
+export PATH=/usr/local/sbin:$PATH

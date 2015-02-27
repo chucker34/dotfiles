@@ -70,6 +70,10 @@ if has('vim_starting')
 endif
 
 "プラグイン
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'dsawardekar/wordpress.vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'groenewege/vim-less'
 NeoBundle 'nginx.vim'
 NeoBundle 'osyo-manga/vim-sound'
 NeoBundle 'cocopon/iceberg.vim'

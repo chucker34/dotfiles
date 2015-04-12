@@ -17,7 +17,7 @@ set laststatus=2   "ステータス行を常に表示
 set cmdheight=2   "メッセージ表示欄を2行確保
 set showmatch      "対応する括弧を強調表示
 set helpheight=999 "ヘルプを画面いっぱいに開く
-""set list           "不可視文字を表示
+set list           "不可視文字を表示
 set listchars=tab:▸\ ,trail:▸,eol:↲,extends:>,precedes:<,nbsp:% "タブ、空白、改行の可視化
 set expandtab
 set tabstop=2     " 画面上でタブ文字が占める幅
@@ -156,6 +156,8 @@ NeoBundleCheck
 map <C-n> :NERDTreeToggle<Cr>
 nnoremap sh :VimShell<Cr>
 nnoremap vs :vsplit<Cr>
+nnoremap sp :split<Cr>
+nnoremap cm :s/^\(.*\)$/<!-- \1 -->/<Cr>:noh<CR>
 "カット実行
 map <C-d> d's
 "ヤンクを実行
@@ -205,8 +207,8 @@ autocmd User Rails.controller*           NeoSnippetSource ~/.vim/snippet/ruby.ra
 autocmd User Rails/db/migrate/*          NeoSnippetSource ~/.vim/snippet/ruby.rails.migrate.snip
 autocmd User Rails/config/routes.rb      NeoSnippetSource ~/.vim/snippet/ruby.rails.route.snip
 
-""autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
-""autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
+autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
+autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
 " add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 au BufRead,BufNewFile /etc/nginx/* set ft=nginx

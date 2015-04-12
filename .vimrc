@@ -161,8 +161,8 @@ nnoremap sp :split<Cr>
 nnoremap cm :s/^\(.*\)$/<!-- \1 -->/<Cr>:noh<CR>
 "windowサイズ変更
 nnoremap <C-l> :vertical resize -5<cr>
-nnoremap <C-j> :resize +5<cr>
-nnoremap <C-k> :resize -5<cr>
+nnoremap <C-k> :resize +5<cr>
+nnoremap <C-j> :resize -5<cr>
 nnoremap <C-h> :vertical resize +5<cr>
 "カット実行
 map <C-d> d's
@@ -190,18 +190,19 @@ let g:solarized_degrade = 0
 "let g:molokai_original = 0
 "colorscheme molokai
 "let g:hybrid_use_Xresources = 1
-""colorscheme molokai
+colorscheme molokai
 ""colorscheme hybrid
 ""colorscheme jellybeans
 ""colorscheme badwolf
-""colorscheme Tomorrow-Night
+"colorscheme Tomorrow-Night-Blue
 ""colorscheme gruvbox
 ""colorscheme candy
 ""colorscheme solarized
 ""colorscheme codeschool
 ""colorscheme railscasts
-""colorscheme lucius
+"colorscheme lucius
 colorscheme iceberg
+set t_Co=256
 
 "Nerdtree設定
 let NERDTreeShowHidden = 1

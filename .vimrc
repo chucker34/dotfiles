@@ -154,10 +154,16 @@ NeoBundleCheck
 
 "ショートカット
 map <C-n> :NERDTreeToggle<Cr>
-nnoremap sh :VimShell<Cr>
+""nnoremap sh :VimShell<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
+"htmlコメントアウト
 nnoremap cm :s/^\(.*\)$/<!-- \1 -->/<Cr>:noh<CR>
+"windowサイズ変更
+nnoremap <C-l> :vertical resize -5<cr>
+nnoremap <C-j> :resize +5<cr>
+nnoremap <C-k> :resize -5<cr>
+nnoremap <C-h> :vertical resize +5<cr>
 "カット実行
 map <C-d> d's
 "ヤンクを実行

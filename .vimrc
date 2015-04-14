@@ -185,7 +185,7 @@ inoremap <C-l> <Right>
 "カラーテーマ
 syntax enable
 set background=dark
-""set t_Co=256
+set t_Co=256
 let g:solarized_termcolors=256
 let g:solarized_contrast = "high"
 let g:solarized_degrade = 0
@@ -206,7 +206,9 @@ let g:solarized_degrade = 0
 ""colorscheme railscasts
 "colorscheme lucius
 colorscheme iceberg
-autocmd VimEnter * :GuiColorScheme iceberg
+if !has('gui_running')
+  autocmd VimEnter * :GuiColorScheme iceberg
+endif
 
 "Nerdtree設定
 let NERDTreeShowHidden = 1

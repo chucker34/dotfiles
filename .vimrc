@@ -71,6 +71,8 @@ endif
 
 "プラグイン
 "NeoBundle 'taichouchou2/html5.vim'
+""NeoBundle 'vim-scripts/CSApprox'
+NeoBundle 'vim-scripts/guicolorscheme.vim'
 NeoBundle 'dsawardekar/wordpress.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'groenewege/vim-less'
@@ -183,6 +185,7 @@ inoremap <C-l> <Right>
 "カラーテーマ
 syntax enable
 set background=dark
+""set t_Co=256
 let g:solarized_termcolors=256
 let g:solarized_contrast = "high"
 let g:solarized_degrade = 0
@@ -190,7 +193,7 @@ let g:solarized_degrade = 0
 "let g:molokai_original = 0
 "colorscheme molokai
 "let g:hybrid_use_Xresources = 1
-colorscheme molokai
+""colorscheme molokai
 ""colorscheme hybrid
 ""colorscheme jellybeans
 ""colorscheme badwolf
@@ -198,11 +201,12 @@ colorscheme molokai
 ""colorscheme gruvbox
 ""colorscheme candy
 ""colorscheme solarized
+""autocmd VimEnter * :GuiColorScheme solarized
 ""colorscheme codeschool
 ""colorscheme railscasts
 "colorscheme lucius
 colorscheme iceberg
-set t_Co=256
+autocmd VimEnter * :GuiColorScheme iceberg
 
 "Nerdtree設定
 let NERDTreeShowHidden = 1

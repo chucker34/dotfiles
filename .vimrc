@@ -72,6 +72,9 @@ endif
 "プラグイン
 "NeoBundle 'taichouchou2/html5.vim'
 ""NeoBundle 'vim-scripts/CSApprox'
+""NeoBundle 'yinsigan/Smyck-Color-Scheme'
+"NeoBundle 'hukl/Smyck-Color-Scheme'
+NeoBundle 'brendonrapp/smyck-vim'
 NeoBundle 'vim-scripts/guicolorscheme.vim'
 NeoBundle 'dsawardekar/wordpress.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
@@ -206,8 +209,11 @@ let g:solarized_degrade = 0
 ""colorscheme railscasts
 "colorscheme lucius
 colorscheme iceberg
+""colorscheme smyck
 if !has('gui_running')
   autocmd VimEnter * :GuiColorScheme iceberg
+  ""autocmd VimEnter * :GuiColorScheme smyck
+  ""autocmd VimEnter * :GuiColorScheme solarized
 endif
 
 "Nerdtree設定

@@ -14,7 +14,7 @@ set number         "行番号を表示する
 set cursorline    "カーソル行の背景色を変える
 "set cursorcolumn  "カーソル位置のカラムの背景色を変える
 set laststatus=2   "ステータス行を常に表示
-set cmdheight=2   "メッセージ表示欄を2行確保
+""set cmdheight=2   "メッセージ表示欄を2行確保
 set showmatch      "対応する括弧を強調表示
 set helpheight=999 "ヘルプを画面いっぱいに開く
 set list           "不可視文字を表示
@@ -121,6 +121,7 @@ NeoBundle 'candy.vim'
 NeoBundle 'toyamarinyon/vim-swift'
 "NeoBundle 'Keithbsmiley/swift.vim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'slim-template/vim-slim'
 
 "コード補完の設定
 "let g:neosnippet#snippets_directory='~/.vim/bundle/snippets/ruby_snip/*.snip'
@@ -211,9 +212,9 @@ let g:solarized_degrade = 0
 colorscheme iceberg
 ""colorscheme smyck
 if !has('gui_running')
-  autocmd VimEnter * :GuiColorScheme iceberg
-  ""autocmd VimEnter * :GuiColorScheme smyck
-  ""autocmd VimEnter * :GuiColorScheme solarized
+autocmd VimEnter * :GuiColorScheme iceberg
+""autocmd VimEnter * :GuiColorScheme smyck
+""autocmd VimEnter * :GuiColorScheme solarized
 endif
 
 "Nerdtree設定

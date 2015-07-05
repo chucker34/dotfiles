@@ -197,6 +197,7 @@ let g:solarized_degrade = 0
 "let g:hybrid_use_Xresources = 1
 ""colorscheme molokai
 ""colorscheme hybrid
+""let g:hybrid_use_Xresources = 1
 ""colorscheme jellybeans
 ""colorscheme badwolf
 "colorscheme Tomorrow-Night-Blue
@@ -210,7 +211,7 @@ let g:solarized_degrade = 0
 colorscheme iceberg
 ""colorscheme smyck
 if !has('gui_running')
-  autocmd VimEnter * :GuiColorScheme iceberg
+autocmd VimEnter * :GuiColorScheme iceberg
 ""autocmd VimEnter * :GuiColorScheme smyck
 ""autocmd VimEnter * :GuiColorScheme solarized
 endif

@@ -1,5 +1,6 @@
 export CLICOLOR=1
-export TERM=xterm-color
+# export TERM=xterm-color
+export TERM=xterm-256color
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export GIT_PAGER="less -r -I"
 
@@ -18,4 +19,4 @@ fi
 
 source ~/dotfiles/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
-PS1='[\u@\h \W]$(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
+PS1='\u@\h:\W$(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '

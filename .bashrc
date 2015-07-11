@@ -20,3 +20,5 @@ fi
 source ~/dotfiles/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1='\u@\h:\W$(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
+
+source ~/dotfiles/.git-completion.bash

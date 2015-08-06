@@ -122,16 +122,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
 
 "コード補完の設定
-"let g:neosnippet#snippets_directory='~/.vim/bundle/snippets/ruby_snip/*.snip'
 let g:neocomplcache_enable_at_startup = 1
-"let g:neocomplcache_enable_camel_case_completion = 1
-"let g:neocomplcache_enable_underbar_completion = 1
-"let g:neocomplcache_smart_case = 1
-"let g:neocomplcache_min_syntax_length = 3
-"let g:neocomplcache_manual_completion_start_length = 0
-"let g:neocomplcache_caching_percent_in_statusline = 1
-"let g:neocomplcache_enable_skip_completion = 1
-"let g:neocomplcache_skip_input_time = '0.5'
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -151,14 +142,12 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 
-
 filetype plugin on
 filetype indent on
 NeoBundleCheck
 
 "ショートカット
 map <C-n> :NERDTreeToggle<Cr>
-""nnoremap sh :VimShell<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
 "htmlコメントアウト
@@ -191,23 +180,11 @@ set t_Co=256
 let g:solarized_termcolors=256
 let g:solarized_contrast = "high"
 let g:solarized_degrade = 0
-"let g:rehash256 = 1
-"let g:molokai_original = 0
-"colorscheme molokai
-"let g:hybrid_use_Xresources = 1
 ""colorscheme molokai
 ""colorscheme hybrid
-""let g:hybrid_use_Xresources = 1
 ""colorscheme jellybeans
 ""colorscheme badwolf
-"colorscheme Tomorrow-Night-Blue
-""colorscheme gruvbox
-""colorscheme candy
 ""colorscheme solarized
-""autocmd VimEnter * :GuiColorScheme solarized
-""colorscheme codeschool
-""colorscheme railscasts
-"colorscheme lucius
 colorscheme iceberg
 ""colorscheme smyck
 if !has('gui_running')

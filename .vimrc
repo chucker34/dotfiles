@@ -164,7 +164,7 @@ map <C-y> y's
 map <Esc> :w<CR>
 map <C-e> :noh<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
-set pastetoggle=<F10>
+set pastetoggle=<C-p>
 "ウィンドウを２つ閉じる
 map <C-t><C-t> :q<CR>:q<CR>
 " 挿入モードでのカーソル移動

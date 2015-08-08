@@ -177,18 +177,17 @@ inoremap <C-l> <Right>
 syntax enable
 set background=dark
 set t_Co=256
-let g:solarized_termcolors=256
 let g:solarized_contrast = "high"
 let g:solarized_degrade = 0
+colorscheme solarized
 ""colorscheme molokai
 ""colorscheme hybrid
 ""colorscheme jellybeans
 ""colorscheme badwolf
-""colorscheme solarized
-colorscheme iceberg
+""colorscheme iceberg
 ""colorscheme smyck
 if !has('gui_running')
-autocmd VimEnter * :GuiColorScheme iceberg
+""autocmd VimEnter * :GuiColorScheme iceberg
 ""autocmd VimEnter * :GuiColorScheme smyck
 ""autocmd VimEnter * :GuiColorScheme solarized
 endif

@@ -70,8 +70,6 @@ if has('vim_starting')
 endif
 
 "プラグイン
-"NeoBundle 'taichouchou2/html5.vim'
-""NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'brendonrapp/smyck-vim'
 NeoBundle 'vim-scripts/guicolorscheme.vim'
 NeoBundle 'dsawardekar/wordpress.vim'
@@ -84,14 +82,8 @@ NeoBundle 'cocopon/iceberg.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle '844196/lightline-badwolf.vim'
-NeoBundle 'morhetz/gruvbox'
 NeoBundle 'tomasr/molokai'
-NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'sjl/badwolf'
-NeoBundle 'jonathanfilip/vim-lucius'
-NeoBundle '29decibel/codeschool-vim-theme'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
-NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
@@ -181,7 +173,6 @@ let g:solarized_contrast = "high"
 let g:solarized_degrade = 0
 colorscheme solarized
 ""colorscheme molokai
-""colorscheme hybrid
 ""colorscheme jellybeans
 ""colorscheme badwolf
 ""colorscheme iceberg
@@ -207,7 +198,7 @@ autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
 autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
 " add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
-au BufRead,BufNewFile /etc/nginx/* set ft=nginx
+au BufRead,BufNewFile */nginx/* set ft=nginx
 
 "autocmd FileType ruby compiler ruby
 "autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
@@ -218,4 +209,3 @@ augroup Close
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
 augroup END
-

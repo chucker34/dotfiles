@@ -165,6 +165,9 @@ inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 
+map <C-a> ^
+map <C-z> $
+
 "カラーテーマ
 syntax enable
 set background=dark

@@ -26,8 +26,6 @@ set softtabstop=0 " 連続した空白に対してタブキーやバックスペ
 set autoindent    " 改行時に前の行のインデントを継続する
 set smartindent   " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set scrolloff=50
-"ファイル名を表示
-set laststatus=2
 "検索/置換の設定
 set hlsearch   "検索文字列をハイライトする
 set incsearch  "インクリメンタルサーチを行う
@@ -48,7 +46,7 @@ inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
-inoremap <% %><LEFT>
+inoremap <% <% %><LEFT>
 vnoremap { "zdi^V{<C-R>z}<ESC>
 vnoremap [ "zdi^V[<C-R>z]<ESC>
 vnoremap ( "zdi^V(<C-R>z)<ESC>

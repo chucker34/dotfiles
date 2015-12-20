@@ -70,6 +70,8 @@ if has('vim_starting')
 endif
 
 "プラグイン
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'AndrewRadev/vim-eco'
 NeoBundle 'brendonrapp/smyck-vim'
 NeoBundle 'vim-scripts/guicolorscheme.vim'
 NeoBundle 'dsawardekar/wordpress.vim'
@@ -212,3 +214,13 @@ augroup Close
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
 augroup END
+
+"syntastic https://github.com/scrooloose/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

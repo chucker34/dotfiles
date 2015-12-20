@@ -17,8 +17,13 @@ if which plenv > /dev/null; then
     eval "$(plenv init -)";
 fi
 
+export PATH=$PATH:/Users/kawakami/Library/Android/sdk/platform-tools
+export PATH=$PATH:/Users/kawakami/Library/Android/sdk/tools
+
 source ~/dotfiles/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1='\u@\h:\W$(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
 
 source ~/dotfiles/.git-completion.bash
+
+HISTTIMEFORMAT='%y/%m/%d %H:%M:%S'

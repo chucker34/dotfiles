@@ -1,20 +1,16 @@
 set nocompatible
 set clipboard+=autoselect "クリップボードを使う
 set clipboard+=unnamed
-"文字コード
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
-
 set backspace=indent,eol,start
 set nobackup
-
 " 画面表示の設定
 set number         "行番号を表示する
 set cursorline    "カーソル行の背景色を変える
-"set cursorcolumn  "カーソル位置のカラムの背景色を変える
 set laststatus=2   "ステータス行を常に表示
-""set cmdheight=2   "メッセージ表示欄を2行確保
+"set cmdheight=2   "メッセージ表示欄を2行確保
 set showmatch      "対応する括弧を強調表示
 set helpheight=999 "ヘルプを画面いっぱいに開く
 set list           "不可視文字を表示
@@ -33,13 +29,11 @@ set ignorecase "大文字と小文字を区別しない
 set smartcase  "大文字と小文字が混在した言葉で検索を行った場合に限り、大文字と小文字を区別する
 set wrapscan   "最後尾まで検索を終えたら次の検索で先頭に移る
 set gdefault   "置換の時 g オプションをデフォルトで有効にする
-
 "ファイル関連
 set autoread   "外部でファイルに変更がされた場合は読みなおす
 set noswapfile "ファイル編集中にスワップファイルを作らない
 set confirm    "保存されていないファイルがあるときは終了前に保存確認
 set imdisable  "IMEオフ
-
 "記号補完
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
@@ -56,7 +50,6 @@ vnoremap ' "zdi'<C-R>z'<ESC>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
-
 "バンドル管理
 "Vi互換OFF
 filetype off
@@ -66,7 +59,6 @@ if has('vim_starting')
   NeoBundleFetch 'Shougo/neobundle.vim'
   call neobundle#end()
 endif
-
 "プラグイン
 "NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'tpope/vim-fugitive'
@@ -140,7 +132,7 @@ filetype plugin on
 filetype indent on
 NeoBundleCheck
 
-"ショートカット
+"キーバインド
 map <C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
@@ -166,7 +158,6 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-
 map <C-a> ^
 map <C-z> $
 
@@ -221,11 +212,9 @@ set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [TYPE=%Y]\ [POS=%04l,%04v][
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-
 let g:syntastic_check_on_wq = 0
 let g:syntastic_eruby_ruby_quiet_messages =
   \ {'regex': 'possibly useless use of a variable in void context'}

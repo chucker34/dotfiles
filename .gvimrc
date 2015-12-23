@@ -1,5 +1,4 @@
 set background=dark
-""colorscheme smyck
 colorscheme iceberg
 set transparency=10
 set guifont=Monaco:h12

@@ -61,6 +61,7 @@ if has('vim_starting')
 endif
 "プラグイン
 "NeoBundle 'itchyny/lightline.vim'
+NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'AndrewRadev/vim-eco'

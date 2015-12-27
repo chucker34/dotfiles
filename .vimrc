@@ -10,7 +10,6 @@ set nobackup
 set number         "行番号を表示する
 set cursorline    "カーソル行の背景色を変える
 set laststatus=2   "ステータス行を常に表示
-"set cmdheight=2   "メッセージ表示欄を2行確保
 set showmatch      "対応する括弧を強調表示
 set helpheight=999 "ヘルプを画面いっぱいに開く
 set list           "不可視文字を表示
@@ -182,7 +181,8 @@ endif
 
 "Nerdtree
 let NERDTreeShowHidden = 1
-autocmd VimEnter * execute 'NERDTree'
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
 "ファイルタイプ
 autocmd User Rails.view*                 NeoSnippetSource ~/.vim/snippet/ruby.rails.view.snip
@@ -216,3 +216,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_eruby_ruby_quiet_messages =
   \ {'regex': 'possibly useless use of a variable in void context'}
+

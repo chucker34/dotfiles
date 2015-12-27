@@ -182,7 +182,6 @@ endif
 "Nerdtree
 let NERDTreeShowHidden = 1
 autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
 
 "ファイルタイプ
 autocmd User Rails.view*                 NeoSnippetSource ~/.vim/snippet/ruby.rails.view.snip

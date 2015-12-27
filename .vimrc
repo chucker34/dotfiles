@@ -162,7 +162,7 @@ inoremap <C-l> <Right>
 map <C-a> ^
 map <C-z> $
 
-"カラーテーマ
+"カラースキーム
 syntax enable
 set background=dark
 set t_Co=256
@@ -180,25 +180,22 @@ if !has('gui_running')
 ""autocmd VimEnter * :GuiColorScheme solarized
 endif
 
-"Nerdtree設定
+"Nerdtree
 let NERDTreeShowHidden = 1
 autocmd VimEnter * execute 'NERDTree'
 
-"オートコマンド
+"ファイルタイプ
 autocmd User Rails.view*                 NeoSnippetSource ~/.vim/snippet/ruby.rails.view.snip
 autocmd User Rails.controller*           NeoSnippetSource ~/.vim/snippet/ruby.rails.controller.snip
 autocmd User Rails.model*                NeoSnippetSource ~/.vim/snippet/ruby.rails.model.snip
 autocmd User Rails/db/migrate/*          NeoSnippetSource ~/.vim/snippet/ruby.rails.migrate.snip
 autocmd User Rails/config/routes.rb      NeoSnippetSource ~/.vim/snippet/ruby.rails.route.snip
-
 autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
 autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
-" add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+au BufRead,BufNewFile */etc/*.conf set ft=conf
+au BufRead,BufNewFile */etc/*.cnf set ft=conf
 au BufRead,BufNewFile */nginx/* set ft=nginx
-
-"autocmd FileType ruby compiler ruby
-"autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 
 augroup Close
   autocmd!

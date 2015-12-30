@@ -63,6 +63,7 @@ NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'AndrewRadev/vim-eco'
 NeoBundle 'brendonrapp/smyck-vim'
@@ -203,7 +204,7 @@ augroup Close
 augroup END
 
 "ステータスライン
-set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ [ENC=%{&fileencoding}]
+"set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ [ENC=%{&fileencoding}]
 "syntastic https://github.com/scrooloose/syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -215,6 +216,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_eruby_ruby_quiet_messages =
   \ {'regex': 'possibly useless use of a variable in void context'}
 
+let g:Powerline_symbols = 'fancy'
 let g:lightline = {
         \ 'colorscheme': 'solarized',
         \ 'mode_map': {'c': 'NORMAL'},

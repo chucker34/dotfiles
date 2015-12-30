@@ -181,7 +181,7 @@ endif
 
 "Nerdtree
 let NERDTreeShowHidden = 1
-autocmd VimEnter * NERDTree
+autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 
 "ファイルタイプ
 autocmd User Rails.view*                 NeoSnippetSource ~/.vim/snippet/ruby.rails.view.snip

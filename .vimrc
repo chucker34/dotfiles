@@ -59,9 +59,10 @@ if has('vim_starting')
   call neobundle#end()
 endif
 "プラグイン
-"NeoBundle 'itchyny/lightline.vim'
 NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'AndrewRadev/vim-eco'
 NeoBundle 'brendonrapp/smyck-vim'
@@ -170,13 +171,11 @@ let g:solarized_degrade = 0
 colorscheme solarized
 ""colorscheme molokai
 ""colorscheme jellybeans
-""colorscheme badwolf
 ""colorscheme iceberg
 ""colorscheme smyck
 if !has('gui_running')
 ""autocmd VimEnter * :GuiColorScheme iceberg
 ""autocmd VimEnter * :GuiColorScheme smyck
-""autocmd VimEnter * :GuiColorScheme solarized
 endif
 
 "Nerdtree
@@ -216,3 +215,28 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_eruby_ruby_quiet_messages =
   \ {'regex': 'possibly useless use of a variable in void context'}
 
+let g:lightline = {
+        \ 'colorscheme': 'solarized',
+        \ 'mode_map': {'c': 'NORMAL'},
+        \ 'active': {
+        \   'left': [
+        \     ['mode', 'paste'],
+        \     ['fugitive', 'gitgutter', 'filename'],
+        \   ],
+        \   'right': [
+        \     ['lineinfo', 'syntastic'],
+        \     ['percent'],
+        \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
+        \   ]
+        \ },
+        \ 'component': {
+        \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+        \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+        \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+        \ },
+        \ 'component_visible_condition': {
+        \   'readonly': '(&filetype!="help"&& &readonly)',
+        \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+        \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+        \ },
+        \ }

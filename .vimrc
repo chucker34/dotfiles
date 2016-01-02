@@ -245,7 +245,7 @@ let g:lightline = {
 
 "type音
 function! PlaySE(name)
-    silent! exec '!afplay ./Typewriter_Sound_FXs/' . a:name . '.wav &'
+    silent! exec '!afplay ~/dotfiles/Typewriter_Sound_FXs/' . a:name . '.wav &'
 endfunction
 " 補完を閉じる
 autocmd CompleteDone * call PlaySE("Return")

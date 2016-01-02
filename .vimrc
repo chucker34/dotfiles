@@ -49,9 +49,9 @@ vnoremap ' "zdi'<C-R>z'<ESC>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
-"バンドル管理
 "Vi互換OFF
 filetype off
+"バンドル管理
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))

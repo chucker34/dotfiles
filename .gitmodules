@@ -1,4 +1,4 @@
-[Neobundle]
+[submodule "Neobundle"]
   path = .vim/bundle/neobundle.vim
   url = git@github.com:Shougo/neobundle.vim.git
   ignore = dirty

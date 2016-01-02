@@ -243,23 +243,18 @@ let g:lightline = {
         \ },
         \ }
 
-"sound
+"type音
 function! PlaySE(name)
     silent! exec '!afplay ./Typewriter_Sound_FXs/' . a:name . '.wav &'
 endfunction
-
 " 補完を閉じる
-autocmd CompleteDone * call PlaySE("Shift")
-
+autocmd CompleteDone * call PlaySE("Return")
 " バッファ移動
 autocmd BufEnter * call PlaySE("Spacebar")
-
 " 入力
 autocmd InsertCharPre * call PlaySE("1_click")
-
 " 保存
 autocmd BufWrite * call PlaySE("End_bell_tab")
-
 " インサートモード IN / OUT
 autocmd InsertEnter * call PlaySE("Page_holder_close")
-autocmd InsertLeave * call PlaySE("Page_holder_close")
+"autocmd InsertLeave * call PlaySE("Page_holder_close")

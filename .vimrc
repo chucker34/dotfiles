@@ -150,7 +150,7 @@ map <C-d> d's
 "ヤンクを実行
 map <C-y> y's
 map <Esc> :w<CR>
-map <C-e> :noh<CR>
+map <C-q> :noh<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<C-p>
 "ウィンドウを２つ閉じる

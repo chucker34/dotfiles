@@ -243,6 +243,11 @@ let g:lightline = {
         \ },
         \ }
 
+"ctrlP
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|)$'
+let g:ctrlp_custom_ignore = '\v[\/](public)$'
+
 "type音
 function! PlaySE(name)
     silent! exec '!afplay ~/dotfiles/Typewriter_Sound_FXs/' . a:name . '.wav &'

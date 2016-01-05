@@ -28,3 +28,6 @@ PS1='\u@\h:\W$(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
 source ~/dotfiles/.git-completion.bash
 
 HISTTIMEFORMAT='%y/%m/%d %H:%M:%S'
+
+# enable control-s and control-q
+stty -ixon

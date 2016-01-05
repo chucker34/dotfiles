@@ -244,6 +244,7 @@ let g:lightline = {
         \ }
 
 "ctrlP
+let g:ctrlp_map = '<c-f>'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|)$'
 let g:ctrlp_custom_ignore = '\v[\/](public)$'

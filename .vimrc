@@ -249,18 +249,20 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|)$'
 let g:ctrlp_custom_ignore = '\v[\/](public)$'
 
-"type音
-function! PlaySE(name)
+if !empty(glob("~/dotfiles/Typewriter_Sound_FXs/"))
+  "type音
+  function! PlaySE(name)
     silent! exec '!afplay ~/dotfiles/Typewriter_Sound_FXs/' . a:name . '.wav &'
-endfunction
-" 補完を閉じる
-autocmd CompleteDone * call PlaySE("Return")
-" バッファ移動
-autocmd BufEnter * call PlaySE("Spacebar")
-" 入力
-autocmd InsertCharPre * call PlaySE("1_click")
-" 保存
-autocmd BufWrite * call PlaySE("End_bell_tab")
-" インサートモード IN / OUT
-autocmd InsertEnter * call PlaySE("Page_holder_close")
-"autocmd InsertLeave * call PlaySE("Page_holder_close")
+  endfunction
+  " 補完を閉じる
+  autocmd CompleteDone * call PlaySE("Return")
+  " バッファ移動
+  autocmd BufEnter * call PlaySE("Spacebar")
+  " 入力
+  autocmd InsertCharPre * call PlaySE("1_click")
+  " 保存
+  autocmd BufWrite * call PlaySE("End_bell_tab")
+  " インサートモード IN / OUT
+  autocmd InsertEnter * call PlaySE("Page_holder_close")
+  "autocmd InsertLeave * call PlaySE("Page_holder_close")
+endif

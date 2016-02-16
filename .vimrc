@@ -191,7 +191,7 @@ autocmd User Rails/db/migrate/*          NeoSnippetSource ~/.vim/snippet/ruby.ra
 autocmd User Rails/config/routes.rb      NeoSnippetSource ~/.vim/snippet/ruby.rails.route.snip
 autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
 autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
-au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+au BufNewFile,BufRead *.jbuilder set ft=ruby
 au BufRead,BufNewFile */etc/*.conf set ft=conf
 au BufRead,BufNewFile */etc/*.cnf set ft=conf
 au BufRead,BufNewFile */nginx/* set ft=nginx
@@ -243,26 +243,29 @@ let g:lightline = {
         \ },
         \ }
 
+"let g:lightline.component = {}
+"let g:lightline.component.dir = '%.35(%{expand("%:h:s?\\S$?\\0/?")}%)'
+
 "ctrlP
 let g:ctrlp_map = '<c-s>'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|)$'
 let g:ctrlp_custom_ignore = '\v[\/](public)$'
 
-if !empty(glob("~/dotfiles/Typewriter_Sound_FXs/"))
-  "type音
-  function! PlaySE(name)
-    silent! exec '!afplay ~/dotfiles/Typewriter_Sound_FXs/' . a:name . '.wav &'
-  endfunction
-  " 補完を閉じる
-  autocmd CompleteDone * call PlaySE("Return")
-  " バッファ移動
-  autocmd BufEnter * call PlaySE("Spacebar")
-  " 入力
-  autocmd InsertCharPre * call PlaySE("1_click")
-  " 保存
-  autocmd BufWrite * call PlaySE("End_bell_tab")
-  " インサートモード IN / OUT
-  autocmd InsertEnter * call PlaySE("Page_holder_close")
-  "autocmd InsertLeave * call PlaySE("Page_holder_close")
-endif
+"if !empty(glob("~/dotfiles/Typewriter_Sound_FXs/"))
+"  "type音
+"  function! PlaySE(name)
+"    silent! exec '!afplay ~/dotfiles/Typewriter_Sound_FXs/' . a:name . '.wav &'
+"  endfunction
+"  " 補完を閉じる
+"  autocmd CompleteDone * call PlaySE("Return")
+"  " バッファ移動
+"  autocmd BufEnter * call PlaySE("Spacebar")
+"  " 入力
+"  autocmd InsertCharPre * call PlaySE("1_click")
+"  " 保存
+"  autocmd BufWrite * call PlaySE("End_bell_tab")
+"  " インサートモード IN / OUT
+"  autocmd InsertEnter * call PlaySE("Page_holder_close")
+"  autocmd InsertLeave * call PlaySE("Page_holder_close")
+"endif

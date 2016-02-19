@@ -224,7 +224,7 @@ let g:lightline = {
         \ 'active': {
         \   'left': [
         \     ['mode', 'paste'],
-        \     ['fugitive', 'gitgutter', 'filename'],
+        \     ['fugitive', 'gitgutter', 'relativepath'],
         \   ],
         \   'right': [
         \     ['lineinfo', 'syntastic'],
@@ -243,9 +243,6 @@ let g:lightline = {
         \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
         \ },
         \ }
-
-"let g:lightline.component = {}
-"let g:lightline.component.dir = '%.35(%{expand("%:h:s?\\S$?\\0/?")}%)'
 
 "ctrlP
 let g:ctrlp_map = '<c-s>'

@@ -57,6 +57,7 @@ if has('vim_starting')
   call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
   "プラグイン
+  NeoBundle 'tomtom/tcomment_vim'
   NeoBundle "ctrlpvim/ctrlp.vim"
   NeoBundle 'tpope/vim-fugitive'
   NeoBundle 'airblade/vim-gitgutter'
@@ -139,7 +140,7 @@ map <C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
 "htmlコメントアウト
-nnoremap cm :s/^\(.*\)$/<!-- \1 -->/<Cr>:noh<CR>
+"nnoremap cm :s/^\(.*\)$/<!-- \1 -->/<Cr>:noh<CR>
 "windowサイズ変更
 nnoremap <C-l> :vertical resize -5<cr>
 nnoremap <C-k> :resize +5<cr>

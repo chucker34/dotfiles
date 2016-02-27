@@ -6,7 +6,6 @@ set termencoding=utf-8
 set fileencoding=utf-8
 set backspace=indent,eol,start
 set nobackup
-" 画面表示の設定
 set number         "行番号を表示する
 set cursorline    "カーソル行の背景色を変える
 set laststatus=2   "ステータス行を常に表示
@@ -21,14 +20,12 @@ set softtabstop=0 " 連続した空白に対してタブキーやバックスペ
 set autoindent    " 改行時に前の行のインデントを継続する
 set smartindent   " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 set scrolloff=50
-"検索/置換の設定
 set hlsearch   "検索文字列をハイライトする
 set incsearch  "インクリメンタルサーチを行う
 set ignorecase "大文字と小文字を区別しない
 set smartcase  "大文字と小文字が混在した言葉で検索を行った場合に限り、大文字と小文字を区別する
 set wrapscan   "最後尾まで検索を終えたら次の検索で先頭に移る
 set gdefault   "置換の時 g オプションをデフォルトで有効にする
-"ファイル関連
 set autoread   "外部でファイルに変更がされた場合は読みなおす
 set noswapfile "ファイル編集中にスワップファイルを作らない
 set confirm    "保存されていないファイルがあるときは終了前に保存確認
@@ -51,12 +48,11 @@ inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
 "Vi互換OFF
 filetype off
-"バンドル管理
+
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundleFetch 'Shougo/neobundle.vim'
-  "プラグイン
   NeoBundle 'tomtom/tcomment_vim'
   NeoBundle "ctrlpvim/ctrlp.vim"
   NeoBundle 'tpope/vim-fugitive'
@@ -111,14 +107,12 @@ if has('vim_starting')
   call neobundle#end()
 endif
 
-"コード補完の設定
+"コード補完
 let g:neocomplcache_enable_at_startup = 1
-
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
-
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
@@ -126,7 +120,6 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
-
 " For snippet_complete marker.
 if has('conceal')
   set conceallevel=2 concealcursor=i

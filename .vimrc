@@ -132,8 +132,6 @@ filetype indent on
 map <C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
-"htmlコメントアウト
-"nnoremap cm :s/^\(.*\)$/<!-- \1 -->/<Cr>:noh<CR>
 "windowサイズ変更
 nnoremap <C-l> :vertical resize -5<cr>
 nnoremap <C-k> :resize +5<cr>
@@ -198,7 +196,6 @@ augroup Close
 augroup END
 
 "ステータスライン
-"set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ [ENC=%{&fileencoding}]
 "syntastic https://github.com/scrooloose/syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

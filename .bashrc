@@ -17,7 +17,7 @@ if which plenv > /dev/null; then
     eval "$(plenv init -)";
 fi
 
-export PATH="/usr/local/share/python:$PATH"
+# export PATH="/usr/local/share/python:$PATH"
 export PATH=$PATH:/Users/kawakami/Library/Android/sdk/platform-tools
 export PATH=$PATH:/Users/kawakami/Library/Android/sdk/tools
 

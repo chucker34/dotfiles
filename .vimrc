@@ -174,7 +174,7 @@ endif
 "Nerdtree
 let NERDTreeShowHidden = 1
 "autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
-autocmd VimEnter * if (@% != '.git/COMMIT_EDITMSG') | NERDTree | endif
+autocmd VimEnter * if (@% != '.git/COMMIT_EDITMSG' && @% != '.git/COMMIT_EDITMSG') | NERDTree | endif
 let NERDTreeIgnore = ['\.DS_Store$']
 
 "ファイルタイプ

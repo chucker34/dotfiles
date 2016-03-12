@@ -46,7 +46,7 @@ vnoremap ' "zdi'<C-R>z'<ESC>
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
-"Vi互換OFF
+"一旦ファイルタイプ関連を無効化する
 filetype off
 
 if has('vim_starting')
@@ -173,7 +173,8 @@ endif
 
 "Nerdtree
 let NERDTreeShowHidden = 1
-autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
+"autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
+autocmd VimEnter * if (@% != '.git/COMMIT_EDITMSG') | NERDTree | endif
 let NERDTreeIgnore = ['\.DS_Store$']
 
 "ファイルタイプ

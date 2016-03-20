@@ -1,5 +1,9 @@
-if [ -f ~/.zshrc ] ; then
-. ~/.zshrc
+if [ -f ~/.profile ]; then
+  source ~/.profile
+fi
+
+if [ -f ~/.bashrc ] ; then
+. ~/.bashrc
 fi
 
 if [ -z $TMUX ]; then

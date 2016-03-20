@@ -2,8 +2,8 @@ if [ -f ~/.profile ]; then
   source ~/.profile
 fi
 
-if [ -f ~/.bashrc ] ; then
-. ~/.bashrc
+if [ -f ~/.zshrc ] ; then
+. ~/.zshrc
 fi
 
 if [ -z $TMUX ]; then

@@ -5,7 +5,7 @@ export PATH="/usr/local/sbin:$PATH"
 if which plenv > /dev/null; then
     export PLENV_ROOT="${HOME}/.plenv"
     export PATH="${PLENV_ROOT}/shims:${PATH}"
-    eval "$(plenv init  - zsh)";
+    eval "$(plenv init - zsh)";
 fi
 # export PATH="/usr/local/share/python:$PATH"
 export PATH=$PATH:/Users/kawakami/Library/Android/sdk/platform-tools

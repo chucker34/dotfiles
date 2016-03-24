@@ -96,3 +96,9 @@ stty -ixon
 # color
 export LSCOLORS=exfxcxdxbxegedabagacad
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+
+# List directory contents
+alias lsa='ls -lahF'
+alias l='ls -lahF'
+alias ll='ls -lhF'
+alias la='ls -lAhF'

@@ -49,7 +49,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow github rails capistrano rake-fast cd-gitroot ssh-agent)
+plugins=(git git-flow github rails capistrano rake-fast cd-gitroot)
 
 # User configuration
 
@@ -86,8 +86,6 @@ source $ZSH/oh-my-zsh.sh
 # ===========
 # My settings
 # ===========
-# autoload -U compinit
-# compinit
 
 # general
 # enable control-s and control-q
@@ -107,5 +105,5 @@ alias la='ls -lAhF'
 # ログインし直す
 alias relogin='exec $SHELL -l'
 
-# rake taskで引数がzsh: no matches foundになる問題の対策
+# rake taskで引数があるとzsh: no matches foundになる問題の対策
 setopt nonomatch

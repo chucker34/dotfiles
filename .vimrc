@@ -259,3 +259,6 @@ let g:ctrlp_custom_ignore = '\v[\/](public)$'
 "  autocmd InsertEnter * call PlaySE("Page_holder_close")
 "  autocmd InsertLeave * call PlaySE("Page_holder_close")
 "endif
+
+
+let g:gitgutter_max_signs = 1000

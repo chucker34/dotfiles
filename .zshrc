@@ -106,3 +106,6 @@ alias la='ls -lAhF'
 
 # ログインし直す
 alias relogin='exec $SHELL -l'
+
+# rake taskで引数がzsh: no matches foundになる問題の対策
+setopt nonomatch

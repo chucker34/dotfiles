@@ -54,6 +54,7 @@ plugins=(git git-flow github rails capistrano rake-fast cd-gitroot heroku git-op
 # User configuration
 
 export PATH="/Users/kawakami/.plenv/shims:/usr/local/sbin:/Users/kawakami/.rbenv/shims:/usr/local/bin:/usr/local/heroku/bin:/Users/kawakami/.plenv/shims:/usr/local/sbin:/Users/kawakami/.rbenv/shims:/usr/local/bin:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/kawakami/.plenv/shims:/usr/local/sbin:/Users/kawakami/.rbenv/shims:/usr/local/heroku/bin:/Users/kawakami/Library/Android/sdk/platform-tools:/Users/kawakami/Library/Android/sdk/tools:/Users/kawakami/Library/Android/sdk/platform-tools:/Users/kawakami/Library/Android/sdk/tools:/Users/kawakami/Library/Android/sdk/platform-tools:/Users/kawakami/Library/Android/sdk/tools"
+export PATH=/usr/local/opt/openssl/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

@@ -7,7 +7,7 @@ set fileencoding=utf-8
 set backspace=indent,eol,start
 set nobackup
 set number         "行番号を表示する
-set cursorline    "カーソル行の背景色を変える
+"set cursorline    "カーソル行の背景色を変える
 set laststatus=2   "ステータス行を常に表示
 set showmatch      "対応する括弧を強調表示
 set helpheight=999 "ヘルプを画面いっぱいに開く

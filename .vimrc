@@ -103,6 +103,9 @@ if has('vim_starting')
   "NeoBundle 'Keithbsmiley/swift.vim'
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'slim-template/vim-slim'
+  NeoBundle "pangloss/vim-javascript"
+  NeoBundle "othree/yajs"
+  NeoBundle 'mxw/vim-jsx'
   NeoBundleCheck
   call neobundle#end()
 endif
@@ -133,10 +136,10 @@ map <C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
 "windowサイズ変更
-nnoremap <C-l> :vertical resize -5<cr>
-nnoremap <C-k> :resize +5<cr>
-nnoremap <C-j> :resize -5<cr>
-nnoremap <C-h> :vertical resize +5<cr>
+nnoremap <C-h> :vertical resize -5<cr>
+nnoremap <C-j> :resize +5<cr>
+nnoremap <C-k> :resize -5<cr>
+nnoremap <C-l> :vertical resize +5<cr>
 "カット実行
 map <C-d> d's
 "ヤンクを実行
@@ -191,6 +194,7 @@ au BufRead,BufNewFile */etc/*.conf set ft=conf
 au BufRead,BufNewFile */etc/*.cnf set ft=conf
 au BufRead,BufNewFile */nginx/* set ft=nginx
 au BufNewFile,BufRead *.slim.bk set syntax=slim
+let g:jsx_ext_required = 0
 
 augroup Close
   autocmd!

@@ -16,10 +16,10 @@ if which plenv > /dev/null; then
     export PATH="${PLENV_ROOT}/shims:${PATH}"
     eval "$(plenv init -)";
 fi
-
-# export PATH="/usr/local/share/python:$PATH"
 export PATH=$PATH:/Users/kawakami/Library/Android/sdk/platform-tools
 export PATH=$PATH:/Users/kawakami/Library/Android/sdk/tools
+export PATH=/usr/local/var/nodebrew/current/bin:$PATH
+export NODEBREW_ROOT=/usr/local/var/nodebrew
 
 source ~/dotfiles/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true

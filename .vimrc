@@ -108,6 +108,7 @@ if has('vim_starting')
   NeoBundle 'mxw/vim-jsx'
   NeoBundle 'alvan/vim-closetag'
   "NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
+  NeoBundle 'w0rp/ale'
   NeoBundleCheck
   call neobundle#end()
 endif

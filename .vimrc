@@ -59,7 +59,7 @@ if has('vim_starting')
   NeoBundle 'airblade/vim-gitgutter'
   NeoBundle 'itchyny/lightline.vim'
   NeoBundle 'Lokaltog/vim-powerline'
-  NeoBundle 'scrooloose/syntastic'
+  "NeoBundle 'scrooloose/syntastic'
   NeoBundle 'AndrewRadev/vim-eco'
   NeoBundle 'brendonrapp/smyck-vim'
   NeoBundle 'vim-scripts/guicolorscheme.vim'
@@ -107,7 +107,7 @@ if has('vim_starting')
   NeoBundle "othree/yajs"
   NeoBundle 'mxw/vim-jsx'
   NeoBundle 'alvan/vim-closetag'
-  NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
+  "NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
   NeoBundleCheck
   call neobundle#end()
 endif
@@ -209,19 +209,19 @@ augroup END
 "ステータスライン
 "syntastic https://github.com/scrooloose/syntastic
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+""set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_loc_list_height = 3
+""let g:syntastic_loc_list_height = 3
 "let g:syntastic_enable_signs = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_eruby_ruby_quiet_messages =
-  \ {'regex': ['possibly useless use of a variable in void context', 'possibly useless use of + in void context']}
+""let g:syntastic_always_populate_loc_list = 1
+""let g:syntastic_auto_loc_list = 0
+""let g:syntastic_check_on_open = 1
+""let g:syntastic_check_on_wq = 0
+""let g:syntastic_eruby_ruby_quiet_messages =
+""  \ {'regex': ['possibly useless use of a variable in void context', 'possibly useless use of + in void context']}
 "let g:syntastic_html_tidy_ignore_errors=['proprietary attribute "ng-']
-let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
-let g:syntastic_javascript_checkers=['eslint']
+""let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
+""let g:syntastic_javascript_checkers=['eslint']
 
 let g:Powerline_symbols = 'fancy'
 let g:lightline = {
@@ -233,7 +233,7 @@ let g:lightline = {
         \     ['fugitive', 'gitgutter', 'relativepath'],
         \   ],
         \   'right': [
-        \     ['lineinfo', 'syntastic'],
+        \     ['lineinfo'],
         \     ['percent'],
         \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
         \   ]

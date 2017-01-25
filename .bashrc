@@ -16,6 +16,14 @@ if which plenv > /dev/null; then
     export PATH="${PLENV_ROOT}/shims:${PATH}"
     eval "$(plenv init -)";
 fi
+
+export PYENV_ROOT=${HOME}/.pyenv
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
+
 export PATH=$PATH:/Users/kawakami/Library/Android/sdk/platform-tools
 export PATH=$PATH:/Users/kawakami/Library/Android/sdk/tools
 export PATH=/usr/local/var/nodebrew/current/bin:$PATH

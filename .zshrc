@@ -57,6 +57,12 @@ export PATH="/Users/kawakami/.plenv/shims:/usr/local/sbin:/Users/kawakami/.rbenv
 export PATH=/usr/local/opt/openssl/bin:$PATH
 export PATH=/usr/local/var/nodebrew/current/bin:$PATH
 export NODEBREW_ROOT=/usr/local/var/nodebrew
+export PYENV_ROOT=${HOME}/.pyenv
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,3 +115,6 @@ alias relogin='exec $SHELL -l'
 
 # rake taskで引数があるとzsh: no matches foundになる問題の対策
 setopt nonomatch
+
+# brewとpyenvのwarning回避
+alias brew="env PATH=${PATH/${HOME}\/\.pyenv\/shims:/} brew"

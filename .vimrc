@@ -205,6 +205,7 @@ augroup Close
   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
   autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
 augroup END
+autocmd Filetype json setl conceallevel=0
 
 "ステータスライン
 "syntastic https://github.com/scrooloose/syntastic

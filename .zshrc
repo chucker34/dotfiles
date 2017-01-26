@@ -63,6 +63,7 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
+export PATH=./node_modules/.bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 

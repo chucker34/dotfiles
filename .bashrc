@@ -39,3 +39,6 @@ HISTTIMEFORMAT='%y/%m/%d %H:%M:%S'
 
 # enable control-s and control-q
 stty -ixon
+
+# direnv
+eval "$(direnv hook bash)"

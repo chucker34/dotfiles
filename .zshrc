@@ -119,3 +119,6 @@ setopt nonomatch
 
 # brewとpyenvのwarning回避
 alias brew="env PATH=${PATH/${HOME}\/\.pyenv\/shims:/} brew"
+
+# direnv
+eval "$(direnv hook zsh)"

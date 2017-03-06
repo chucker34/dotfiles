@@ -4,6 +4,11 @@ function fish_user_key_bindings
   bind \cr peco_select_history # Bind for prco history to Ctrl+r
 end
 
+function sync_history --on-event fish_preexec
+  history --save
+  history --merge
+end
+
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -x PATH /usr/local/heroku/bin $PATH
 set -x PATH /usr/local/opt/openssl/bin $PATH

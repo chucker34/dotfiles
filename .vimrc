@@ -112,6 +112,9 @@ if has('vim_starting')
   NeoBundle 'mxw/vim-jsx'
   NeoBundle 'alvan/vim-closetag'
   NeoBundle 'w0rp/ale'
+  NeoBundle 'ekalinin/Dockerfile.vim'
+  NeoBundle 'aliva/vim-fish'
+  NeoBundle 'whatyouhide/vim-tmux-syntax'
   NeoBundleCheck
   call neobundle#end()
 endif

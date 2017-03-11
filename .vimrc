@@ -79,6 +79,7 @@ if has('vim_starting')
   NeoBundle '844196/lightline-badwolf.vim'
   NeoBundle 'tomasr/molokai'
   NeoBundle 'sjl/badwolf'
+  NeoBundle 'dracula/vim'
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'Shougo/neobundle.vim'
   NeoBundle 'Shougo/neocomplcache'
@@ -175,6 +176,7 @@ set t_Co=256
 let g:solarized_contrast = "high"
 let g:solarized_degrade = 0
 colorscheme solarized
+""colorscheme dracula
 ""colorscheme molokai
 ""colorscheme jellybeans
 ""colorscheme iceberg

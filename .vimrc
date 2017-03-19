@@ -70,6 +70,7 @@ if has('vim_starting')
   NeoBundle 'nginx.vim'
   NeoBundle 'osyo-manga/vim-sound'
   NeoBundle 'altercation/vim-colors-solarized'
+  NeoBundle 'cocopon/iceberg.vim'
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'Shougo/neobundle.vim'
   NeoBundle 'Shougo/neocomplcache'

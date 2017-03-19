@@ -62,7 +62,7 @@ if has('vim_starting')
   NeoBundle 'tpope/vim-fugitive'
   NeoBundle 'airblade/vim-gitgutter'
   NeoBundle 'itchyny/lightline.vim'
-  NeoBundle 'Lokaltog/vim-powerline'
+  "NeoBundle 'Lokaltog/vim-powerline'
   NeoBundle 'scrooloose/syntastic'
   NeoBundle 'AndrewRadev/vim-eco'
   NeoBundle 'dsawardekar/wordpress.vim'
@@ -199,30 +199,30 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 let g:Powerline_symbols = 'fancy'
 let g:lightline = {
-        \ 'colorscheme': 'solarized',
-        \ 'mode_map': {'c': 'NORMAL'},
-        \ 'active': {
-        \   'left': [
-        \     ['mode', 'paste'],
-        \     ['fugitive', 'gitgutter', 'relativepath'],
-        \   ],
-        \   'right': [
-        \     ['lineinfo', 'syntastic'],
-        \     ['percent'],
-        \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
-        \   ]
-        \ },
-        \ 'component': {
-        \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
-        \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-        \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-        \ },
-        \ 'component_visible_condition': {
-        \   'readonly': '(&filetype!="help"&& &readonly)',
-        \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-        \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-        \ },
-        \ }
+  \ 'colorscheme': 'solarized',
+  \ 'mode_map': {'c': 'NORMAL'},
+  \ 'active': {
+  \   'left': [
+  \     ['mode', 'paste'],
+  \     ['fugitive', 'gitgutter', 'relativepath'],
+  \   ],
+  \   'right': [
+  \     ['lineinfo', 'syntastic'],
+  \     ['percent'],
+  \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
+  \   ]
+  \ },
+  \ 'component': {
+  \   'readonly': '%{&filetype=="help"?"":&readonly?"⭤":""}',
+  \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+  \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+  \ },
+  \ 'component_visible_condition': {
+  \   'readonly': '(&filetype!="help"&& &readonly)',
+  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+  \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+  \ },
+\ }
 
 "ctrlP
 let g:ctrlp_map = '<c-s>'

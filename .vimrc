@@ -65,29 +65,18 @@ if has('vim_starting')
   NeoBundle 'Lokaltog/vim-powerline'
   NeoBundle 'scrooloose/syntastic'
   NeoBundle 'AndrewRadev/vim-eco'
-  NeoBundle 'brendonrapp/smyck-vim'
-  NeoBundle 'vim-scripts/guicolorscheme.vim'
   NeoBundle 'dsawardekar/wordpress.vim'
   NeoBundle 'hail2u/vim-css3-syntax'
   NeoBundle 'groenewege/vim-less'
   NeoBundle 'sudo.vim'
   NeoBundle 'nginx.vim'
   NeoBundle 'osyo-manga/vim-sound'
-  NeoBundle 'cocopon/iceberg.vim'
   NeoBundle 'altercation/vim-colors-solarized'
-  NeoBundle 'nanotech/jellybeans.vim'
-  NeoBundle '844196/lightline-badwolf.vim'
-  NeoBundle 'tomasr/molokai'
-  NeoBundle 'sjl/badwolf'
-  NeoBundle 'dracula/vim'
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'Shougo/neobundle.vim'
   NeoBundle 'Shougo/neocomplcache'
   NeoBundle 'Shougo/neosnippet'
   NeoBundle 'Shougo/neosnippet-snippets'
-  NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'Shougo/vimfiler'
-  NeoBundle 'Shougo/vimshell'
   NeoBundle 'Shougo/vimproc', {
         \ 'build' : {
         \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -102,10 +91,7 @@ if has('vim_starting')
   NeoBundle 'tpope/vim-rails.git'
   NeoBundle 'tpope/vim-endwise'
   NeoBundle 'tpope/vim-surround'
-  NeoBundle 'candy.vim'
-  "swift
   NeoBundle 'toyamarinyon/vim-swift'
-  "NeoBundle 'Keithbsmiley/swift.vim'
   NeoBundle 'kchmck/vim-coffee-script'
   NeoBundle 'slim-template/vim-slim'
   NeoBundle "pangloss/vim-javascript"
@@ -176,15 +162,9 @@ set t_Co=256
 let g:solarized_contrast = "high"
 let g:solarized_degrade = 0
 colorscheme solarized
-""colorscheme dracula
-""colorscheme molokai
-""colorscheme jellybeans
-""colorscheme iceberg
-""colorscheme smyck
-if !has('gui_running')
-""autocmd VimEnter * :GuiColorScheme iceberg
-""autocmd VimEnter * :GuiColorScheme smyck
-endif
+
+"if !has('gui_running')
+"endif
 
 "Nerdtree
 let NERDTreeShowHidden = 1

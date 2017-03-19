@@ -203,6 +203,7 @@ let g:lightline = {
   \   'left': [
   \     ['mode', 'paste'],
   \     ['fugitive', 'gitgutter', 'relativepath'],
+  \     ['ale'],
   \   ],
   \   'right': [
   \     ['lineinfo', 'syntastic'],
@@ -220,7 +221,19 @@ let g:lightline = {
   \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
   \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
   \ },
+  \'component_function': {
+  \  'ale': 'ALEStatus'
+  \},
 \ }
+
+"ale
+function! ALEStatus()
+  return ALEGetStatusLine()
+endfunction
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 "ctrlP
 let g:ctrlp_map = '<c-s>'

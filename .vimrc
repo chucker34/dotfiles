@@ -51,6 +51,8 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 "一旦ファイルタイプ関連を無効化する
 filetype off
 
+let g:ale_emit_conflict_warnings = 0
+
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))

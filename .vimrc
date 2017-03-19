@@ -51,8 +51,6 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o>
 "一旦ファイルタイプ関連を無効化する
 filetype off
 
-let g:ale_emit_conflict_warnings = 0
-
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
   call neobundle#begin(expand('~/.vim/bundle/'))
@@ -63,7 +61,7 @@ if has('vim_starting')
   NeoBundle 'airblade/vim-gitgutter'
   NeoBundle 'itchyny/lightline.vim'
   "NeoBundle 'Lokaltog/vim-powerline'
-  NeoBundle 'scrooloose/syntastic'
+  "NeoBundle 'scrooloose/syntastic'
   NeoBundle 'AndrewRadev/vim-eco'
   NeoBundle 'dsawardekar/wordpress.vim'
   NeoBundle 'hail2u/vim-css3-syntax'
@@ -188,14 +186,14 @@ augroup END
 autocmd Filetype json setl conceallevel=0
 
 "ステータスライン
-let g:syntastic_loc_list_height = 3
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_eruby_ruby_quiet_messages =
-  \ {'regex': ['possibly useless use of a variable in void context', 'possibly useless use of + in void context']}
-let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
+""let g:syntastic_loc_list_height = 3
+""let g:syntastic_always_populate_loc_list = 1
+""let g:syntastic_auto_loc_list = 1
+""let g:syntastic_check_on_open = 1
+""let g:syntastic_check_on_wq = 0
+""let g:syntastic_eruby_ruby_quiet_messages =
+""  \ {'regex': ['possibly useless use of a variable in void context', 'possibly useless use of + in void context']}
+""let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 let g:Powerline_symbols = 'fancy'
 let g:lightline = {

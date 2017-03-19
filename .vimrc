@@ -3,38 +3,36 @@ if $SHELL =~ 'fish'
 endif
 
 set nocompatible
-set clipboard+=autoselect "クリップボードを使う
+set clipboard+=autoselect
 set clipboard+=unnamed
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set backspace=indent,eol,start
 set nobackup
-set number         "行番号を表示する
-"set cursorline    "カーソル行の背景色を変える
-set laststatus=2   "ステータス行を常に表示
-set showmatch      "対応する括弧を強調表示
-set helpheight=999 "ヘルプを画面いっぱいに開く
-set list           "不可視文字を表示
+set number
+set laststatus=2
+set showmatch
+set helpheight=999
+set list
 set listchars=tab:▸\ ,trail:▸,eol:↲,extends:>,precedes:<,nbsp:% "タブ、空白、改行の可視化
 set expandtab
-set tabstop=2     " 画面上でタブ文字が占める幅
-set shiftwidth=2  " 自動インデントでずれる幅
-set softtabstop=0 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
-set autoindent    " 改行時に前の行のインデントを継続する
-set smartindent   " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
+set tabstop=2
+set shiftwidth=2
+set softtabstop=0
+set autoindent
+set smartindent
 set scrolloff=50
-set hlsearch   "検索文字列をハイライトする
-set incsearch  "インクリメンタルサーチを行う
-set ignorecase "大文字と小文字を区別しない
-set smartcase  "大文字と小文字が混在した言葉で検索を行った場合に限り、大文字と小文字を区別する
-set wrapscan   "最後尾まで検索を終えたら次の検索で先頭に移る
-set gdefault   "置換の時 g オプションをデフォルトで有効にする
-set autoread   "外部でファイルに変更がされた場合は読みなおす
-set noswapfile "ファイル編集中にスワップファイルを作らない
-set confirm    "保存されていないファイルがあるときは終了前に保存確認
-set imdisable  "IMEオフ
-"記号補完
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set wrapscan
+set gdefault
+set autoread
+set noswapfile
+set confirm
+set imdisable
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
@@ -46,10 +44,10 @@ vnoremap [ "zdi^V[<C-R>z]<ESC>
 vnoremap ( "zdi^V(<C-R>z)<ESC>
 vnoremap " "zdi^V"<C-R>z^V"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
-"改行インデント
 inoremap {<Enter> {}<Left><CR><ESC><S-o>
 inoremap [<Enter> []<Left><CR><ESC><S-o>
 inoremap (<Enter> ()<Left><CR><ESC><S-o>
+
 "一旦ファイルタイプ関連を無効化する
 filetype off
 
@@ -106,48 +104,38 @@ if has('vim_starting')
   call neobundle#end()
 endif
 
-"コード補完
+"neosnippet
 let g:neocomplcache_enable_at_startup = 1
-" Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
-" SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
-" For snippet_complete marker.
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+"closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js"
 
-filetype plugin on
-filetype indent on
-
-"キーバインド
 map <C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
-"windowサイズ変更
 nnoremap <C-h> :vertical resize -5<cr>
 nnoremap <C-j> :resize +5<cr>
 nnoremap <C-k> :resize -5<cr>
 nnoremap <C-l> :vertical resize +5<cr>
-"カット実行
 map <C-d> d's
-"ヤンクを実行
 map <C-y> y's
 map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<C-p>
-"ウィンドウを２つ閉じる
 map <C-t><C-t> :q<CR>:q<CR>
-" 挿入モードでのカーソル移動
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
@@ -168,18 +156,19 @@ colorscheme solarized
 
 "Nerdtree
 let NERDTreeShowHidden = 1
-"autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
 autocmd VimEnter * if (@% != '.git/COMMIT_EDITMSG' && @% != '.git/PULLREQ_EDITMSG') | NERDTree | endif
 let NERDTreeIgnore = ['\.DS_Store$']
 
 "ファイルタイプ
+filetype plugin on
+filetype indent on
 autocmd User Rails.view*                 NeoSnippetSource ~/.vim/snippet/ruby.rails.view.snip
 autocmd User Rails.controller*           NeoSnippetSource ~/.vim/snippet/ruby.rails.controller.snip
 autocmd User Rails.model*                NeoSnippetSource ~/.vim/snippet/ruby.rails.model.snip
 autocmd User Rails/db/migrate/*          NeoSnippetSource ~/.vim/snippet/ruby.rails.migrate.snip
 autocmd User Rails/config/routes.rb      NeoSnippetSource ~/.vim/snippet/ruby.rails.route.snip
-"autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
-"autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
+autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
+autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
 au BufRead,BufNewFile *.jbuilder set ft=ruby
 au BufNewFile,BufRead *.html.erb.deface set syntax=eruby.html
 au BufRead,BufNewFile */etc/*.conf set ft=conf
@@ -187,7 +176,6 @@ au BufRead,BufNewFile */etc/*.cnf set ft=conf
 au BufRead,BufNewFile */nginx/* set ft=nginx
 au BufNewFile,BufRead *.slim.bk set syntax=slim
 let g:jsx_ext_required = 0
-
 augroup Close
   autocmd!
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
@@ -197,7 +185,6 @@ augroup END
 autocmd Filetype json setl conceallevel=0
 
 "ステータスライン
-"syntastic https://github.com/scrooloose/syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -208,7 +195,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_eruby_ruby_quiet_messages =
   \ {'regex': ['possibly useless use of a variable in void context', 'possibly useless use of + in void context']}
-"let g:syntastic_html_tidy_ignore_errors=['proprietary attribute "ng-']
 let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 let g:Powerline_symbols = 'fancy'
@@ -261,6 +247,5 @@ let g:ctrlp_custom_ignore = '\v[\/](public)$'
 "  autocmd InsertEnter * call PlaySE("Page_holder_close")
 "  autocmd InsertLeave * call PlaySE("Page_holder_close")
 "endif
-
 
 let g:gitgutter_max_signs = 1000

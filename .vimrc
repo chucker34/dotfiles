@@ -202,13 +202,13 @@ let g:lightline = {
   \ 'active': {
   \   'left': [
   \     ['mode', 'paste'],
-  \     ['fugitive', 'gitgutter', 'relativepath'],
+  \     ['fugitive', 'relativepath'],
   \     ['ale'],
   \   ],
   \   'right': [
-  \     ['lineinfo', 'syntastic'],
+  \     ['lineinfo'],
   \     ['percent'],
-  \     ['charcode', 'fileformat', 'fileencoding', 'filetype'],
+  \     ['fileformat', 'fileencoding', 'filetype'],
   \   ]
   \ },
   \ 'component': {

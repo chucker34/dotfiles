@@ -196,7 +196,7 @@ au BufRead,BufNewFile Podfile set filetype=ruby
 ""  \ {'regex': ['possibly useless use of a variable in void context', 'possibly useless use of + in void context']}
 ""let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
-let g:Powerline_symbols = 'fancy'
+""let g:Powerline_symbols = 'fancy'
 let g:lightline = {
   \ 'colorscheme': 'solarized',
   \ 'mode_map': {'c': 'NORMAL'},

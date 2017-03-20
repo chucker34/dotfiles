@@ -212,6 +212,8 @@ let g:lightline = {
   \     ['fileformat', 'fileencoding', 'filetype'],
   \   ]
   \ },
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '', 'right': '' },
   \ 'component': {
   \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
   \ },
@@ -219,9 +221,18 @@ let g:lightline = {
   \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
   \ },
   \'component_function': {
+  \  'fugitive': 'LightlineFugitive',
   \  'ale': 'ALEStatus'
-  \},
+  \ },
 \ }
+
+function! LightlineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# '' ? ' '.branch : ''
+  endif
+  return ''
+endfunction
 
 "ale
 function! ALEStatus()

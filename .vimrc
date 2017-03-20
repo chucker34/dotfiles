@@ -184,6 +184,7 @@ augroup Close
   autocmd Filetype eruby inoremap <buffer> </ </<C-x><C-o>
 augroup END
 autocmd Filetype json setl conceallevel=0
+au BufRead,BufNewFile Podfile set filetype=ruby
 
 "ステータスライン
 ""let g:syntastic_loc_list_height = 3

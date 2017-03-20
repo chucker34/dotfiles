@@ -203,8 +203,8 @@ let g:lightline = {
   \ 'active': {
   \   'left': [
   \     ['mode', 'paste'],
-  \     ['fugitive', 'relativepath'],
-  \     ['ale'],
+  \     ['fugitive'],
+  \     ['relativepath', 'ale'],
   \   ],
   \   'right': [
   \     ['lineinfo'],

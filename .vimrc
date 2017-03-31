@@ -136,7 +136,7 @@ map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<C-p>
-map <C-t><C-t> :q<CR>:q<CR>
+map <C-t><C-t> :q<CR>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
@@ -168,8 +168,8 @@ autocmd User Rails.controller*           NeoSnippetSource ~/.vim/snippet/ruby.ra
 autocmd User Rails.model*                NeoSnippetSource ~/.vim/snippet/ruby.rails.model.snip
 autocmd User Rails/db/migrate/*          NeoSnippetSource ~/.vim/snippet/ruby.rails.migrate.snip
 autocmd User Rails/config/routes.rb      NeoSnippetSource ~/.vim/snippet/ruby.rails.route.snip
-autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
-autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
+"autocmd BufWritePre * :%s/\s\+$//e "保存時に空白削除
+"autocmd BufWritePre * :%s/\t/ /ge "保存時にtabをスペースに変換
 au BufRead,BufNewFile *.jbuilder set ft=ruby
 au BufNewFile,BufRead *.html.erb.deface set syntax=eruby.html
 au BufRead,BufNewFile */etc/*.conf set ft=conf

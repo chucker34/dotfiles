@@ -20,5 +20,6 @@ set -x PATH /Users/kawakami/Library/Android/sdk/platform-tools $PATH
 set -x PATH /Users/kawakami/Library/Android/sdk/tools $PATH
 # for serverless framework
 set -x PATH ./node_modules/.bin $PATH
+set -gx Z_SCRIPT_PATH /usr/local/etc/profile.d/z.sh
 
 eval (direnv hook fish)

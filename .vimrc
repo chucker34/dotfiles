@@ -266,3 +266,13 @@ let g:ctrlp_custom_ignore = '\v[\/](public)$'
 "endif
 
 let g:gitgutter_max_signs = 1000
+
+command! -nargs=? Jq call s:Jq(<f-args>)
+function! s:Jq(...)
+    if 0 == a:0
+        let l:arg = "."
+    else
+        let l:arg = a:1
+    endif
+    execute "%! jq \"" . l:arg . "\""
+endfunction

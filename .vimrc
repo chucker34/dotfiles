@@ -101,6 +101,7 @@ if has('vim_starting')
   NeoBundle 'ekalinin/Dockerfile.vim'
   NeoBundle 'aliva/vim-fish'
   NeoBundle 'whatyouhide/vim-tmux-syntax'
+  NeoBundle 'leafgarland/typescript-vim'
   NeoBundleCheck
   call neobundle#end()
 endif

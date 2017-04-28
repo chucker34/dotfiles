@@ -142,8 +142,6 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-map <C-a> ^
-map <C-z> $
 
 "カラースキーム
 syntax enable

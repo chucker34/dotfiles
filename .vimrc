@@ -102,6 +102,7 @@ if has('vim_starting')
   NeoBundle 'aliva/vim-fish'
   NeoBundle 'whatyouhide/vim-tmux-syntax'
   NeoBundle 'leafgarland/typescript-vim'
+  NeoBundle 'IN3D/vim-raml'
   NeoBundleCheck
   call neobundle#end()
 endif

@@ -176,6 +176,7 @@ au BufRead,BufNewFile */etc/*.conf set ft=conf
 au BufRead,BufNewFile */etc/*.cnf set ft=conf
 au BufRead,BufNewFile */nginx/* set ft=nginx
 au BufNewFile,BufRead *.slim.bk set syntax=slim
+au BufRead,BufNewFile .env.* set ft=sh
 let g:jsx_ext_required = 0
 augroup Close
   autocmd!

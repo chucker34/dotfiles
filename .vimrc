@@ -73,9 +73,9 @@ if has('vim_starting')
   NeoBundle 'cocopon/iceberg.vim'
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'Shougo/neobundle.vim'
-  NeoBundle 'Shougo/neocomplcache'
-  NeoBundle 'Shougo/neosnippet'
-  NeoBundle 'Shougo/neosnippet-snippets'
+  ""NeoBundle 'Shougo/neocomplcache'
+  ""NeoBundle 'Shougo/neosnippet'
+  ""NeoBundle 'Shougo/neosnippet-snippets'
   NeoBundle 'Shougo/vimproc', {
         \ 'build' : {
         \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -108,19 +108,19 @@ if has('vim_starting')
 endif
 
 "neosnippet
-let g:neocomplcache_enable_at_startup = 1
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
+""let g:neocomplcache_enable_at_startup = 1
+""imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+""smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+""xmap <C-k>     <Plug>(neosnippet_expand_target)
+""imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+""\ "\<Plug>(neosnippet_expand_or_jump)"
+""\: pumvisible() ? "\<C-n>" : "\<TAB>"
+""smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+""\ "\<Plug>(neosnippet_expand_or_jump)"
+""\: "\<TAB>"
+""if has('conceal')
+""  set conceallevel=2 concealcursor=i
+""endif
 
 "closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js"

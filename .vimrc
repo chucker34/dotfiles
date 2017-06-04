@@ -103,6 +103,7 @@ if has('vim_starting')
   NeoBundle 'whatyouhide/vim-tmux-syntax'
   NeoBundle 'leafgarland/typescript-vim'
   NeoBundle 'IN3D/vim-raml'
+  NeoBundle 'vim-multiple-cursors'
   NeoBundleCheck
   call neobundle#end()
 endif

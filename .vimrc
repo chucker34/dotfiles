@@ -126,7 +126,7 @@ endif
 "closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js"
 
-map <C-n> :NERDTreeToggle<Cr>
+nnoremap nn :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
 nnoremap <C-h> :vertical resize -5<cr>
@@ -138,7 +138,7 @@ map <C-y> y's
 map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
-set pastetoggle=<C-p>
+set pastetoggle=pp
 map <C-t><C-t> :q<CR>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>

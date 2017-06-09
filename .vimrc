@@ -33,20 +33,20 @@ set autoread
 set noswapfile
 set confirm
 set imdisable
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-inoremap <% <% %><LEFT>
-vnoremap { "zdi^V{<C-R>z}<ESC>
-vnoremap [ "zdi^V[<C-R>z]<ESC>
-vnoremap ( "zdi^V(<C-R>z)<ESC>
-vnoremap " "zdi^V"<C-R>z^V"<ESC>
-vnoremap ' "zdi'<C-R>z'<ESC>
-inoremap {<Enter> {}<Left><CR><ESC><S-o>
-inoremap [<Enter> []<Left><CR><ESC><S-o>
-inoremap (<Enter> ()<Left><CR><ESC><S-o>
+"inoremap { {}<LEFT>
+"inoremap [ []<LEFT>
+"inoremap ( ()<LEFT>
+"inoremap " ""<LEFT>
+"inoremap ' ''<LEFT>
+"inoremap <% <% %><LEFT>
+"vnoremap { "zdi^V{<C-R>z}<ESC>
+"vnoremap [ "zdi^V[<C-R>z]<ESC>
+"vnoremap ( "zdi^V(<C-R>z)<ESC>
+"vnoremap " "zdi^V"<C-R>z^V"<ESC>
+"vnoremap ' "zdi'<C-R>z'<ESC>
+"inoremap {<Enter> {}<Left><CR><ESC><S-o>
+"inoremap [<Enter> []<Left><CR><ESC><S-o>
+"inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 "一旦ファイルタイプ関連を無効化する
 filetype off
@@ -104,6 +104,7 @@ if has('vim_starting')
   NeoBundle 'leafgarland/typescript-vim'
   NeoBundle 'IN3D/vim-raml'
   NeoBundle 'vim-multiple-cursors'
+  NeoBundle 'cohama/lexima.vim'
   NeoBundleCheck
   call neobundle#end()
 endif
@@ -126,7 +127,7 @@ endif
 "closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js"
 
-nnoremap nn :NERDTreeToggle<Cr>
+nnoremap mn :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
 nnoremap <C-h> :vertical resize -5<cr>
@@ -138,7 +139,7 @@ map <C-y> y's
 map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
-set pastetoggle=pp
+set pastetoggle=mp
 map <C-t><C-t> :q<CR>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>

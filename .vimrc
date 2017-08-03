@@ -127,7 +127,7 @@ endif
 "closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js,*.jsx,*.erb"
 
-nnoremap mn :NERDTreeToggle<Cr>
+nnoremap <C-m><C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
 nnoremap <C-h> :vertical resize -5<cr>
@@ -139,7 +139,7 @@ map <C-y> y's
 map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
-set pastetoggle=mp
+set pastetoggle=<C-m><C-p>
 map <C-t><C-t> :q<CR>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
@@ -179,6 +179,7 @@ au BufRead,BufNewFile */etc/*.cnf set ft=conf
 au BufRead,BufNewFile */nginx/* set ft=nginx
 au BufNewFile,BufRead *.slim.bk set syntax=slim
 au BufRead,BufNewFile .env.* set ft=sh
+au BufRead,BufNewFile .envrc set ft=sh
 let g:jsx_ext_required = 0
 augroup Close
   autocmd!

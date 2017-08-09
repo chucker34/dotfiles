@@ -91,6 +91,7 @@ if has('vim_starting')
   NeoBundle 'IN3D/vim-raml'
   NeoBundle 'vim-multiple-cursors'
   NeoBundle 'cohama/lexima.vim'
+  NeoBundle 'rcmdnk/vim-markdown'
   NeoBundleCheck
   call neobundle#end()
 endif

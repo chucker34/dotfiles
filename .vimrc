@@ -125,6 +125,8 @@ map <C-d> d's
 map <C-y> y's
 map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
+nnoremap nl :NeoCompleteLock<CR>
+nnoremap nu :NeoCompleteUnlock<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<C-m><C-p>
 map <C-t><C-t> :q<CR>

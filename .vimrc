@@ -112,8 +112,9 @@ if has('conceal')
 endif
 
 "closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js,*.jsx,*.erb"
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js,*.jsx,*.tsx,*.erb"
 
+" ショートカット
 nnoremap <C-m><C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
@@ -125,6 +126,7 @@ map <C-d> d's
 map <C-y> y's
 map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
+" TODO: Toggleにしたい
 nnoremap nl :NeoCompleteLock<CR>
 nnoremap nu :NeoCompleteUnlock<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
@@ -134,6 +136,8 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+nnoremap ns :%s/\n/ /<CR>
+nnoremap @@ @a<CR>
 
 "カラースキーム
 syntax enable

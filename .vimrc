@@ -138,6 +138,7 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 nnoremap ns :%s/\n/ /<CR>
 nnoremap @@ @a<CR>
+inoremap <C-f> <C-x><C-o>
 
 "カラースキーム
 syntax enable
@@ -179,6 +180,7 @@ augroup Close
 augroup END
 autocmd Filetype json setl conceallevel=0
 au BufRead,BufNewFile Podfile set filetype=ruby
+au BufRead,BufNewFile *.tsx set filetype=typescript
 
 let g:lightline = {
   \ 'colorscheme': 'solarized',

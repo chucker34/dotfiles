@@ -110,11 +110,15 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::'
 
 "closetag
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js,*.jsx,*.tsx,*.erb"
 
-" ショートカット
+" キーマッピング
 nnoremap <C-m><C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>

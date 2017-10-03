@@ -33,6 +33,7 @@ set autoread
 set noswapfile
 set confirm
 set imdisable
+" set synmaxcol=200
 
 "一旦ファイルタイプ関連を無効化する
 filetype off
@@ -89,7 +90,7 @@ if has('vim_starting')
   NeoBundle 'whatyouhide/vim-tmux-syntax'
   NeoBundle 'leafgarland/typescript-vim'
   NeoBundle 'IN3D/vim-raml'
-  NeoBundle 'vim-multiple-cursors'
+  " NeoBundle 'vim-multiple-cursors'
   NeoBundle 'cohama/lexima.vim'
   NeoBundle 'rcmdnk/vim-markdown'
   NeoBundleCheck
@@ -119,7 +120,7 @@ let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml*,*.js,*.jsx,*.tsx,*.erb"
 
 " キーマッピング
-nnoremap <C-m><C-n> :NERDTreeToggle<Cr>
+nnoremap <C-t><C-n> :NERDTreeToggle<Cr>
 nnoremap vs :vsplit<Cr>
 nnoremap sp :split<Cr>
 nnoremap <C-h> :vertical resize -5<cr>
@@ -130,18 +131,18 @@ map <C-d> d's
 map <C-y> y's
 map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
-" TODO: Toggleにしたい
-nnoremap nl :NeoCompleteLock<CR>
-nnoremap nu :NeoCompleteUnlock<CR>
+" " TODO: Toggleにしたい
+" nnoremap nl :NeoCompleteLock<CR>
+" nnoremap nu :NeoCompleteUnlock<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
-set pastetoggle=<C-m><C-p>
+set pastetoggle=<C-t><C-p>
 map <C-t><C-t> :q<CR>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
-nnoremap ns :%s/\n/ /<CR>
-nnoremap @@ @a<CR>
+" inoremap <C-j> <Down>
+" inoremap <C-k> <Up>
+" inoremap <C-h> <Left>
+" inoremap <C-l> <Right>
+" nnoremap ns :%s/\n/ /<CR>
+" nnoremap @@ @a<CR>
 inoremap <C-f> <C-x><C-o>
 
 "カラースキーム

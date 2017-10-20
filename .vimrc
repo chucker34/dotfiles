@@ -33,7 +33,7 @@ set autoread
 set noswapfile
 set confirm
 set imdisable
-" set synmaxcol=200
+set synmaxcol=200
 
 "一旦ファイルタイプ関連を無効化する
 filetype off
@@ -90,7 +90,6 @@ if has('vim_starting')
   NeoBundle 'whatyouhide/vim-tmux-syntax'
   NeoBundle 'leafgarland/typescript-vim'
   NeoBundle 'IN3D/vim-raml'
-  " NeoBundle 'vim-multiple-cursors'
   NeoBundle 'cohama/lexima.vim'
   NeoBundle 'rcmdnk/vim-markdown'
   NeoBundle 'editorconfig/editorconfig-vim'
@@ -132,18 +131,13 @@ map <C-d> d's
 map <C-y> y's
 map <Esc><Esc> :w<CR>
 map <C-q> :noh<CR>
-" " TODO: Toggleにしたい
-" nnoremap nl :NeoCompleteLock<CR>
-" nnoremap nu :NeoCompleteUnlock<CR>
 nnoremap tt :<C-u>tabnew<CR>:NERDTreeToggle<CR>
 set pastetoggle=<C-t><C-p>
 map <C-t><C-t> :q<CR>
-" inoremap <C-j> <Down>
-" inoremap <C-k> <Up>
-" inoremap <C-h> <Left>
-" inoremap <C-l> <Right>
-" nnoremap ns :%s/\n/ /<CR>
-" nnoremap @@ @a<CR>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 inoremap <C-f> <C-x><C-o>
 
 "カラースキーム
@@ -241,7 +235,7 @@ let g:ale_sign_warning = '⚠'
 let g:ctrlp_map = '<c-s>'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|)$'
-let g:ctrlp_custom_ignore = '\v[\/](public)$'
+let g:ctrlp_custom_ignore = '\v[\/](log|vendor|tmp|node_modules)$'
 
 "if !empty(glob("~/dotfiles/Typewriter_Sound_FXs/"))
 "  "type音

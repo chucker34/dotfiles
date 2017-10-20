@@ -93,9 +93,14 @@ if has('vim_starting')
   NeoBundle 'cohama/lexima.vim'
   NeoBundle 'rcmdnk/vim-markdown'
   NeoBundle 'editorconfig/editorconfig-vim'
+  NeoBundle 'osyo-manga/vim-over'
   NeoBundleCheck
   call neobundle#end()
 endif
+
+let mapleader = ","
+" over.vimの起動
+nnoremap <silent> <Leader>m :OverCommandLine<CR>
 
 "neocomplete
 let g:neocomplete#enable_at_startup = 1

@@ -94,6 +94,7 @@ if has('vim_starting')
   NeoBundle 'rcmdnk/vim-markdown'
   NeoBundle 'editorconfig/editorconfig-vim'
   NeoBundle 'osyo-manga/vim-over'
+  NeoBundle 'ap/vim-css-color'
   NeoBundleCheck
   call neobundle#end()
 endif

@@ -1,3 +1,7 @@
+if $SHELL =~ 'fish'
+  set shell=/bin/sh
+endif
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -40,5 +44,38 @@ endif
 
 "End dein Scripts-------------------------
 
+" ColorScheme:
 set background=dark
 colorscheme solarized
+
+" General:
+set clipboard+=unnamedplus
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set backspace=indent,eol,start
+set nobackup
+set number
+set laststatus=2
+set showmatch
+set helpheight=999
+set list
+set listchars=tab:▸\ ,trail:▸,eol:↲,extends:>,precedes:<,nbsp:% "タブ、空白、改行の可視化
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=0
+set autoindent
+set smartindent
+set scrolloff=50
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set wrapscan
+set gdefault
+set autoread
+set noswapfile
+set confirm
+set imdisable
+

@@ -17,16 +17,14 @@ if dein#load_state('/Users/kawakami/.config/nvim/dein')
   " Let dein manage dein
   " Required:
   call dein#add('/Users/kawakami/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-
   " You can specify revision/branch/tag.
-  call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+  " call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
 
-  " ColorScheme:
-  call dein#add('altercation/vim-colors-solarized')
+  " Load Plugins:
+  let s:toml = '~/.config/nvim/dein/dein.toml'
+  let s:lazy_toml = '~/.config/nvim/dein/dein_lazy.toml'
+  call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   " Required:
   call dein#end()
@@ -78,3 +76,23 @@ set softtabstop=0
 set tabstop=2
 set termencoding=utf-8
 set wrapscan
+"set pastetoggle=<C-t><C-p>
+
+" Keymap:
+nnoremap vs :vsplit<Cr>
+nnoremap sp :split<Cr>
+nnoremap <C-h> :vertical resize -5<cr>
+nnoremap <C-j> :resize +5<cr>
+nnoremap <C-k> :resize -5<cr>
+nnoremap <C-l> :vertical resize +5<cr>
+nnoremap <Esc><Esc> :w<CR>
+nnoremap <C-q> :noh<CR>
+nnoremap <C-s> :source ~/dotfiles/init.vim<CR>
+nnoremap tt :tabnew<CR>
+nnoremap <C-t><C-t> :q<CR>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+"inoremap <C-f> <C-x><C-o>
+

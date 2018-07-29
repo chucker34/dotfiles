@@ -94,5 +94,7 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+nnoremap <silent> ;s :<C-u>Denite file_rec<CR>
+nnoremap <silent> ;g :<C-u>Denite -buffer-name=search -mode=normal grep<CR>
 "inoremap <C-f> <C-x><C-o>
 

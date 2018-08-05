@@ -22,9 +22,5 @@ hook_post_source = '''
   let g:deoplete#enable_at_startup = 1
 '''
 
-[[plugins]]
-repo = 'vim-ruby/vim-ruby'
-
-[[plugins]]
-repo = 'tpope/vim-rails.git'
-
+repo = 'cespare/vim-toml'
+on_ft = ['toml']

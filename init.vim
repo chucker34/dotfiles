@@ -77,7 +77,7 @@ set softtabstop=0
 set tabstop=2
 set termencoding=utf-8
 set wrapscan
-"set pastetoggle=<C-t><C-p>
+set pastetoggle=<C-t><C-p>
 
 " Keymap:
 nnoremap vs :vsplit<Cr>
@@ -91,11 +91,6 @@ nnoremap <C-q> :noh<CR>
 nnoremap <C-s> :source ~/dotfiles/init.vim<CR>
 nnoremap tt :tabnew<CR>
 nnoremap <C-t><C-t> :q<CR>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
 nnoremap <silent> ;s :<C-u>Denite file_rec<CR>
 nnoremap <silent> ;g :<C-u>Denite -buffer-name=search -mode=normal grep<CR>
-"inoremap <C-f> <C-x><C-o>
 

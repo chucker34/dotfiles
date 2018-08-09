@@ -19,13 +19,15 @@ repo = 'Shougo/neosnippet-snippets'
 # FIXME: 起動しない
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-hook_source = '''
+hook_add = '''
   let g:deoplete#enable_at_startup = 1
-'''
-hook_post_source = '''
-  call deoplete#enable()
 '''
 
 [[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
+
+[[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = ['rb']
+

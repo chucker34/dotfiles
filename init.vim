@@ -9,6 +9,7 @@ endif
 
 " Required:
 set runtimepath+=/Users/kawakami/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/deoplete.nvim
 
 " Required:
 if dein#load_state('/Users/kawakami/.config/nvim/dein')

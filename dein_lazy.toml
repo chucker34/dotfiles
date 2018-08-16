@@ -39,3 +39,4 @@ repo = 'vim-ruby/vim-ruby'
 
 [[plugins]]
 repo = 'tpope/vim-rails'
+

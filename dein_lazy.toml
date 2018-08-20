@@ -40,3 +40,14 @@ repo = 'vim-ruby/vim-ruby'
 [[plugins]]
 repo = 'tpope/vim-rails'
 
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+
+# TODO: 動いてない？
+[[plugins]]
+repo = 'mhartington/nvim-typescript'
+

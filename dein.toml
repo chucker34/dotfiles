@@ -1,7 +1,4 @@
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
-
-[[plugins]]
 repo = 'terryma/vim-multiple-cursors'
 
 [[plugins]]

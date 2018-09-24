@@ -44,8 +44,6 @@ endif
 "End dein Scripts-------------------------
 
 " ColorScheme:
-set background=dark
-colorscheme solarized
 
 " General:
 set autoindent

@@ -150,7 +150,6 @@ inoremap <C-f> <C-x><C-o>
 syntax enable
 set background=dark
 colorscheme dracula
-set t_Co=256
 
 "Nerdtree
 let NERDTreeShowHidden = 1

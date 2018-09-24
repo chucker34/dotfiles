@@ -35,6 +35,7 @@ endif
 " Required:
 filetype plugin indent on
 syntax enable
+" call dein#recache_runtimepath()
 
 " If you want to install not installed plugins on startup.
 if dein#check_install()
@@ -44,10 +45,8 @@ endif
 "End dein Scripts-------------------------
 
 " ColorScheme:
- let g:dracula_italic = 0
 let g:dracula_colorterm = 0
 colorscheme dracula
-set termguicolors
 
 " General:
 set autoindent

@@ -23,4 +23,6 @@ set -x COMPOSE_HTTP_TIMEOUT 200
 # 反映されないから/Users/kawakami/.config/fisherman/z/functions/z.fishに直接書いた
 # set -gx Z_SCRIPT_PATH /usr/local/etc/profile.d/z.sh
 
+set -x TERM screen-256color
+
 eval (direnv hook fish)

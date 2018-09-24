@@ -44,6 +44,10 @@ endif
 "End dein Scripts-------------------------
 
 " ColorScheme:
+ let g:dracula_italic = 0
+let g:dracula_colorterm = 0
+colorscheme dracula
+set termguicolors
 
 " General:
 set autoindent

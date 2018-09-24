@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'dracula/vim'
+
+[[plugins]]
 repo = 'terryma/vim-multiple-cursors'
 
 [[plugins]]

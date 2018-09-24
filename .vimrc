@@ -54,7 +54,6 @@ if has('vim_starting')
   NeoBundle 'sudo.vim'
   NeoBundle 'nginx.vim'
   NeoBundle 'osyo-manga/vim-sound'
-  NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'cocopon/iceberg.vim'
   NeoBundle 'scrooloose/nerdtree'
   NeoBundle 'Shougo/neobundle.vim'
@@ -95,6 +94,7 @@ if has('vim_starting')
   NeoBundle 'editorconfig/editorconfig-vim'
   NeoBundle 'osyo-manga/vim-over'
   NeoBundle 'ap/vim-css-color'
+  NeoBundle 'dracula/vim'
   NeoBundleCheck
   call neobundle#end()
 endif
@@ -149,10 +149,8 @@ inoremap <C-f> <C-x><C-o>
 "カラースキーム
 syntax enable
 set background=dark
+colorscheme dracula
 set t_Co=256
-let g:solarized_contrast = "high"
-let g:solarized_degrade = 0
-colorscheme solarized
 
 "Nerdtree
 let NERDTreeShowHidden = 1
@@ -189,7 +187,7 @@ au BufRead,BufNewFile Podfile set filetype=ruby
 au BufRead,BufNewFile *.tsx set filetype=typescript
 
 let g:lightline = {
-  \ 'colorscheme': 'solarized',
+  \ 'colorscheme': 'Dracula',
   \ 'mode_map': {'c': 'NORMAL'},
   \ 'active': {
   \   'left': [

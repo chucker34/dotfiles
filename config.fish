@@ -13,12 +13,19 @@ end
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -x PATH /usr/local/opt/openssl/bin $PATH
-set -x PATH /usr/local/var/nodebrew/current/bin $PATH
-set -x NODEBREW_ROOT /usr/local/var/nodebrew
 set -x PATH /Users/kawakami/Library/Android/sdk/platform-tools $PATH
 set -x PATH /Users/kawakami/Library/Android/sdk/tools $PATH
 
-export ANDROID_SDK=/Users/kawakami/Library/Android/sdk
+set -x ANDROID_SDK /Users/kawakami/Library/Android/sdk
+
+# for nvm
+function nvm
+   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
+set -x NODE_VERSIONS ~/.nvm/versions/node
+set -x NODE_VERSION_PREFIX v
 
 # for serverless framework
 set -x PATH ./node_modules/.bin $PATH

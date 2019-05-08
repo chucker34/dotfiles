@@ -44,12 +44,11 @@ repo = 'tpope/vim-rails'
 repo = 'jelera/vim-javascript-syntax'
 on_ft = ['javascript', 'javascript.jsx']
 
-# [[plugins]]
-# repo = 'HerringtonDarkholme/yats.vim'
-# 
-# # TODO: 動いてない？
-# [[plugins]]
-# repo = 'mhartington/nvim-typescript'
-# 
-# [[plugins]]
-# repo = 'sudar/vim-arduino-syntax'
+[[plugins]]
+repo = 'elzr/vim-json'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'mhartington/nvim-typescript'

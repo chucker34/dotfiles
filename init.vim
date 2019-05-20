@@ -44,6 +44,7 @@ endif
 
 "End dein Scripts-------------------------
 
+" Grep:
 call denite#custom#var('grep', 'command', ['ag'])
 call denite#custom#var('grep', 'default_opts',
 		\ ['-i', '--vimgrep'])
@@ -112,6 +113,11 @@ nnoremap <C-q> :noh<CR>
 nnoremap <C-s> :source ~/dotfiles/init.vim<CR>
 nnoremap tt :tabnew<CR>
 nnoremap <C-t><C-t> :q<CR>
-nnoremap <silent> ;s :<C-u>Denite file_rec<CR>
+nnoremap <silent> ;s :<C-u>Denite file/rec<CR>
 nnoremap <silent> ;g :<C-u>Denite -buffer-name=search -mode=normal grep<CR>
+
+let g:vue_disable_pre_processors=1
+autocmd FileType vue syntax sync fromstart
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
+autocmd BufRead,BufNewFile *.ts setlocal filetype=javascript.typescript
 

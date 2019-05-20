@@ -41,14 +41,11 @@ repo = 'vim-ruby/vim-ruby'
 repo = 'tpope/vim-rails'
 
 [[plugins]]
-repo = 'jelera/vim-javascript-syntax'
-on_ft = ['javascript', 'javascript.jsx']
-
-[[plugins]]
-repo = 'elzr/vim-json'
-
-[[plugins]]
-repo = 'Shougo/context_filetype.vim'
+repo = 'HerringtonDarkholme/yats.vim'
 
 [[plugins]]
 repo = 'mhartington/nvim-typescript'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+

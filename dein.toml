@@ -14,5 +14,8 @@ repo = 'justinmk/vim-dirvish'
 repo = 'Shougo/denite.nvim'
 
 [[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
 repo = 'thinca/vim-qfreplace'
 

@@ -44,6 +44,26 @@ endif
 
 "End dein Scripts-------------------------
 
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'default_opts',
+		\ ['-i', '--vimgrep'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
+let s:ignore_globs = ['.git', '.svn', 'node_modules', 'log', 'logs']
+call denite#custom#var('file/rec', 'command', [
+      \ 'ag',
+      \ '--follow',
+      \ ] + map(deepcopy(s:ignore_globs), { k, v -> '--ignore=' . v }) + [
+      \ '--nocolor',
+      \ '--nogroup',
+      \ '-g',
+      \ ''
+      \ ])
+call denite#custom#source('file/rec', 'matchers', ['matcher/substring'])
+call denite#custom#filter('matcher/ignore_globs', 'ignore_globs', s:ignore_globs)
+
 " ColorScheme:
 let g:dracula_colorterm = 0
 colorscheme dracula

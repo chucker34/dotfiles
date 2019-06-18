@@ -8,22 +8,22 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/kawakami/.config/nvim/dein/repos/github.com/Shougo/dein.vim
-set runtimepath+=~/.config/nvim/dein/repos/github.com/Shougo/deoplete.nvim
+set runtimepath+=/Users/t_kawakami/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/deoplete.nvim
 
 " Required:
-if dein#load_state('/Users/kawakami/.config/nvim/dein')
-  call dein#begin('/Users/kawakami/.config/nvim/dein')
+if dein#load_state('/Users/t_kawakami/.cache/dein')
+  call dein#begin('/Users/t_kawakami/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/kawakami/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('/Users/t_kawakami/.cache/dein/repos/github.com/Shougo/dein.vim')
   " You can specify revision/branch/tag.
   " call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
 
   " Load Plugins:
-  let s:toml = '~/.config/nvim/dein/dein.toml'
-  let s:lazy_toml = '~/.config/nvim/dein/dein_lazy.toml'
+  let s:toml = '~/.cache/dein/dein.toml'
+  let s:lazy_toml = '~/.cache/dein/dein_lazy.toml'
   call dein#load_toml(s:toml, {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 

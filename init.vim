@@ -100,6 +100,8 @@ set tabstop=2
 set termencoding=utf-8
 set wrapscan
 set pastetoggle=<C-t><C-p>
+set modifiable
+set write
 
 " Keymap:
 nnoremap vs :vsplit<Cr>
@@ -113,11 +115,29 @@ nnoremap <C-q> :noh<CR>
 nnoremap <C-s> :source ~/dotfiles/init.vim<CR>
 nnoremap tt :tabnew<CR>
 nnoremap <C-t><C-t> :q<CR>
-nnoremap <silent> ;s :<C-u>Denite file/rec<CR>
-nnoremap <silent> ;g :<C-u>Denite -buffer-name=search -mode=normal grep<CR>
 
+" FileType:
 let g:vue_disable_pre_processors=1
 autocmd FileType vue syntax sync fromstart
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
 autocmd BufRead,BufNewFile *.ts setlocal filetype=javascript.typescript
 
+" Denite:
+nnoremap <silent> ;f :<C-u>Denite file/rec -split=floating -winrow=1<CR>
+nnoremap <silent> ;s :<C-u>Denite -buffer-name=search grep -split=floating -winrow=1<CR>
+
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> d
+  \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+  \ denite#do_map('toggle_select').'j'
+endfunction

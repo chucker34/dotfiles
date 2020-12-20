@@ -13,9 +13,15 @@ end
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 set -x PATH /usr/local/opt/openssl/bin $PATH
-set -x PATH /Users/kawakami/Library/Android/sdk/platform-tools $PATH
-set -x PATH /Users/kawakami/Library/Android/sdk/tools $PATH
-set -x ANDROID_SDK /Users/kawakami/Library/Android/sdk
+
+# Android
+set -x PATH ~/Library/Android/sdk/platform-tools $PATH
+set -x PATH ~/Library/Android/sdk/tools $PATH
+set -x PATH ~/Library/Android/sdk/tools/bin/sdkmanager $PATH
+set -x ANDROID_HOME $HOME/Library/Android/sdk
+set -x ANDROID_SDK_ROOT ~/Library/Android/sdk
+set -x ANDROID_AVD_HOME ~/.android/avd
+set -x JAVA_HOME "/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
 
 # nvm
 function nvm
@@ -37,6 +43,11 @@ set -x COMPOSE_HTTP_TIMEOUT 200
 
 # tmux
 set -x TERM screen-256color
+set -x TMUX_TMPDIR ~/.tmux/tmp
 
 # direnv
 eval (direnv hook fish)
+
+#rbenv
+set -x PATH $HOME/.rbenv/bin $PATH
+status --is-interactive; and source (rbenv init -|psub)

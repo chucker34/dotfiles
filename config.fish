@@ -38,9 +38,6 @@ set -x PATH ./node_modules/.bin $PATH
 # docker-composeで使うネットワークのタイムアウトを伸ばす
 set -x COMPOSE_HTTP_TIMEOUT 200
 
-# 反映されないから/Users/kawakami/.config/fisherman/z/functions/z.fishに直接書いた
-# set -gx Z_SCRIPT_PATH /usr/local/etc/profile.d/z.sh
-
 # tmux
 set -x TERM screen-256color
 set -x TMUX_TMPDIR ~/.tmux/tmp

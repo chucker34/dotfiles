@@ -13,24 +13,6 @@ function sync_history --on-event fish_preexec
   history --merge
 end
 
-# Android
-set -x PATH ~/Library/Android/sdk/platform-tools $PATH
-set -x PATH ~/Library/Android/sdk/tools $PATH
-set -x PATH ~/Library/Android/sdk/tools/bin/sdkmanager $PATH
-set -x ANDROID_HOME $HOME/Library/Android/sdk
-set -x ANDROID_SDK_ROOT ~/Library/Android/sdk
-set -x ANDROID_AVD_HOME ~/.android/avd
-set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
-
-# nvm
-function nvm
-  bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
-end
-set -x NVM_DIR ~/.nvm
-nvm use default --silent
-set -x NODE_VERSIONS ~/.nvm/versions/node
-set -x NODE_VERSION_PREFIX v
-
 # serverless framework
 set -x PATH ./node_modules/.bin $PATH
 
@@ -44,15 +26,33 @@ set -x TMUX_TMPDIR ~/.tmux/tmp
 # direnv
 eval (direnv hook fish)
 
-#rbenv
-set -x PATH $HOME/.rbenv/bin $PATH
-status --is-interactive; and source (rbenv init -|psub)
-
-# openssl
-set -x PATH /usr/local/opt/openssl@1.1/bin $PATH
-
 # Nix
 if test '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
   bass source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 end
 
+if not test $DEVBOX_SHELL_ENABLED
+  # rbenv
+  set -x PATH $HOME/.rbenv/bin $PATH
+  status --is-interactive; and source (rbenv init -|psub)
+  # openssl
+  set -x PATH /usr/local/opt/openssl@1.1/bin $PATH
+
+  # Android
+  set -x PATH ~/Library/Android/sdk/platform-tools $PATH
+  set -x PATH ~/Library/Android/sdk/tools $PATH
+  set -x PATH ~/Library/Android/sdk/tools/bin/sdkmanager $PATH
+  set -x ANDROID_HOME $HOME/Library/Android/sdk
+  set -x ANDROID_SDK_ROOT ~/Library/Android/sdk
+  set -x ANDROID_AVD_HOME ~/.android/avd
+  set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
+
+  # nvm
+  function nvm
+    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+  end
+  set -x NVM_DIR ~/.nvm
+  nvm use default --silent
+  set -x NODE_VERSIONS ~/.nvm/versions/node
+  set -x NODE_VERSION_PREFIX v
+end

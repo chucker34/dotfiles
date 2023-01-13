@@ -24,7 +24,7 @@ set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
 
 # nvm
 function nvm
-   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+  bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
 end
 set -x NVM_DIR ~/.nvm
 nvm use default --silent
@@ -50,4 +50,9 @@ status --is-interactive; and source (rbenv init -|psub)
 
 # openssl
 set -x PATH /usr/local/opt/openssl@1.1/bin $PATH
+
+# Nix
+if test '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+  bass source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+end
 

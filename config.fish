@@ -13,9 +13,6 @@ function sync_history --on-event fish_preexec
   history --merge
 end
 
-# serverless framework
-set -x PATH ./node_modules/.bin $PATH
-
 # docker-composeで使うネットワークのタイムアウトを伸ばす
 set -x COMPOSE_HTTP_TIMEOUT 200
 

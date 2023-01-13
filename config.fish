@@ -28,10 +28,21 @@ if test '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
   bass source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 end
 
+# devbox shellが起動してない場合はPATHを通す
 if not test $DEVBOX_SHELL_ENABLED
   # rbenv
   set -x PATH $HOME/.rbenv/bin $PATH
   status --is-interactive; and source (rbenv init -|psub)
+
+  # nvm
+  function nvm
+    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+  end
+  set -x NVM_DIR ~/.nvm
+  nvm use default --silent
+  set -x NODE_VERSIONS ~/.nvm/versions/node
+  set -x NODE_VERSION_PREFIX v
+
   # openssl
   set -x PATH /usr/local/opt/openssl@1.1/bin $PATH
 
@@ -43,13 +54,4 @@ if not test $DEVBOX_SHELL_ENABLED
   set -x ANDROID_SDK_ROOT ~/Library/Android/sdk
   set -x ANDROID_AVD_HOME ~/.android/avd
   set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
-
-  # nvm
-  function nvm
-    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
-  end
-  set -x NVM_DIR ~/.nvm
-  nvm use default --silent
-  set -x NODE_VERSIONS ~/.nvm/versions/node
-  set -x NODE_VERSION_PREFIX v
 end

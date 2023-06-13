@@ -2,6 +2,8 @@ if status is-interactive
   eval (/opt/homebrew/bin/brew shellenv)
 end
 
+set -x PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
+
 source ~/.profile
 
 set -g theme_display_ruby no

@@ -6,8 +6,6 @@ source ~/.profile
 
 set -g theme_display_ruby no
 
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-
 function fish_user_key_bindings
   bind \cr peco_select_history # Bind for prco history to Ctrl+r
 end

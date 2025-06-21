@@ -2,28 +2,47 @@ if $SHELL =~ 'fish'
   set shell=/bin/sh
 endif
 
+" install dein.vim
+let $CACHE = expand('~/.cache')
+if !($CACHE->isdirectory())
+  call mkdir($CACHE, 'p')
+endif
+if &runtimepath !~# '/dein.vim'
+  let s:dir = 'dein.vim'->fnamemodify(':p')
+  if !(s:dir->isdirectory())
+    let s:dir = $CACHE .. '/dein/repos/github.com/Shougo/dein.vim'
+    if !(s:dir->isdirectory())
+      execute '!git clone https://github.com/Shougo/dein.vim' s:dir
+    endif
+  endif
+  execute 'set runtimepath^='
+        \ .. s:dir->fnamemodify(':p')->substitute('[/\\]$', '', '')
+endif
+
+let g:python3_host_prog = '/opt/homebrew/bin/python3'
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
 
 " Required:
-set runtimepath+=/Users/t_kawakami/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/deoplete.nvim
 
 " Required:
-if dein#load_state('/Users/t_kawakami/.cache/dein')
-  call dein#begin('/Users/t_kawakami/.cache/dein')
+if dein#load_state('~/.cache/dein')
+  call dein#begin('~/.cache/dein')
 
   " Let dein manage dein
   " Required:
-  call dein#add('/Users/t_kawakami/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   " You can specify revision/branch/tag.
   " call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
 
   " Load Plugins:
-  let s:toml = '~/.cache/dein/dein.toml'
-  let s:lazy_toml = '~/.cache/dein/dein_lazy.toml'
+  let s:toml = '~/dotfiles/dein.toml'
+  let s:lazy_toml = '~/dotfiles/dein_lazy.toml'
   call dein#load_toml(s:toml, {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
@@ -43,31 +62,6 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
-" Grep:
-call denite#custom#var('grep', 'command', ['ag'])
-call denite#custom#var('grep', 'default_opts',
-		\ ['-i', '--vimgrep'])
-call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#var('grep', 'pattern_opt', [])
-call denite#custom#var('grep', 'separator', ['--'])
-call denite#custom#var('grep', 'final_opts', [])
-let s:ignore_globs = ['.git', '.svn', 'node_modules', 'log', 'logs']
-call denite#custom#var('file/rec', 'command', [
-      \ 'ag',
-      \ '--follow',
-      \ ] + map(deepcopy(s:ignore_globs), { k, v -> '--ignore=' . v }) + [
-      \ '--nocolor',
-      \ '--nogroup',
-      \ '-g',
-      \ ''
-      \ ])
-call denite#custom#source('file/rec', 'matchers', ['matcher/substring'])
-call denite#custom#filter('matcher/ignore_globs', 'ignore_globs', s:ignore_globs)
-
-" ColorScheme:
-let g:dracula_colorterm = 0
-colorscheme dracula
 
 " General:
 set autoindent
@@ -121,23 +115,3 @@ let g:vue_disable_pre_processors=1
 autocmd FileType vue syntax sync fromstart
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
 autocmd BufRead,BufNewFile *.ts setlocal filetype=javascript.typescript
-
-" Denite:
-nnoremap <silent> ;f :<C-u>Denite file/rec -split=floating -winrow=1<CR>
-nnoremap <silent> ;s :<C-u>Denite -buffer-name=search grep -split=floating -winrow=1<CR>
-
-autocmd FileType denite call s:denite_my_settings()
-function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>
-  \ denite#do_map('toggle_select').'j'
-endfunction

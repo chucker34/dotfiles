@@ -1,8 +1,12 @@
+if status is-interactive
+  eval (/opt/homebrew/bin/brew shellenv)
+end
+
+set -x PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
+
 source ~/.profile
 
 set -g theme_display_ruby no
-
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 function fish_user_key_bindings
   bind \cr peco_select_history # Bind for prco history to Ctrl+r
@@ -24,27 +28,31 @@ set -x TMUX_TMPDIR ~/.tmux/tmp
 eval (direnv hook fish)
 
 # Nix
-if test '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-  bass source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-end
+# if test '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+#   bass source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+# end
 
 # devbox shellが起動してない場合はPATHを通す
 if not test $DEVBOX_SHELL_ENABLED
+  # anyenv
+  status --is-interactive; and source (anyenv init -|psub)
+
   # rbenv
-  set -x PATH $HOME/.rbenv/bin $PATH
-  status --is-interactive; and source (rbenv init -|psub)
+  # set -x PATH $HOME/.rbenv/bin $PATH
+  # status --is-interactive; and source (rbenv init -|psub)
 
   # nvm
-  function nvm
-    bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
-  end
-  set -x NVM_DIR ~/.nvm
-  nvm use default --silent
-  set -x NODE_VERSIONS ~/.nvm/versions/node
-  set -x NODE_VERSION_PREFIX v
+  # function nvm
+  #   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+  # end
+  # set -x NVM_DIR ~/.nvm
+  # nvm use default --silent
+  # set -x NODE_VERSIONS ~/.nvm/versions/node
+  # set -x NODE_VERSION_PREFIX v
 
   # openssl
-  set -x PATH /usr/local/opt/openssl@1.1/bin $PATH
+  set -x PATH /opt/homebrew/bin/openssl@3/bin $PATH
+  set -x RUBY_CONFIGURE_OPTS "--with-openssl-dir=/opt/homebrew/opt/openssl@3"
 
   # Android
   set -x PATH ~/Library/Android/sdk/platform-tools $PATH

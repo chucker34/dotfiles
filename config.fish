@@ -51,7 +51,8 @@ if not test $DEVBOX_SHELL_ENABLED
   # set -x NODE_VERSION_PREFIX v
 
   # openssl
-  set -x PATH /opt/homebrew/bin/openssl@1.1/bin $PATH
+  set -x PATH /opt/homebrew/bin/openssl@3/bin $PATH
+  set -x RUBY_CONFIGURE_OPTS "--with-openssl-dir=/opt/homebrew/opt/openssl@3"
 
   # Android
   set -x PATH ~/Library/Android/sdk/platform-tools $PATH

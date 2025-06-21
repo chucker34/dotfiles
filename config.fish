@@ -37,19 +37,6 @@ if not test $DEVBOX_SHELL_ENABLED
   # anyenv
   status --is-interactive; and source (anyenv init -|psub)
 
-  # rbenv
-  # set -x PATH $HOME/.rbenv/bin $PATH
-  # status --is-interactive; and source (rbenv init -|psub)
-
-  # nvm
-  # function nvm
-  #   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
-  # end
-  # set -x NVM_DIR ~/.nvm
-  # nvm use default --silent
-  # set -x NODE_VERSIONS ~/.nvm/versions/node
-  # set -x NODE_VERSION_PREFIX v
-
   # openssl
   set -x PATH /opt/homebrew/bin/openssl@3/bin $PATH
   set -x RUBY_CONFIGURE_OPTS "--with-openssl-dir=/opt/homebrew/opt/openssl@3"

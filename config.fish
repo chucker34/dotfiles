@@ -2,8 +2,6 @@ if status is-interactive
   eval (/opt/homebrew/bin/brew shellenv)
 end
 
-set -x PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
-
 source ~/.profile
 
 set -g theme_display_ruby no
@@ -32,6 +30,8 @@ eval (direnv hook fish)
 #   bass source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 # end
 
+set -x PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
+
 # devbox shellが起動してない場合はPATHを通す
 if not test $DEVBOX_SHELL_ENABLED
   # anyenv
@@ -50,3 +50,4 @@ if not test $DEVBOX_SHELL_ENABLED
   set -x ANDROID_AVD_HOME ~/.android/avd
   set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
 end
+

@@ -32,6 +32,9 @@ eval (direnv hook fish)
 
 set -x PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
 
+# pipx binaries
+set -x PATH "/Users/takahirokawakami/.local/bin" $PATH
+
 # devbox shellが起動してない場合はPATHを通す
 if not test $DEVBOX_SHELL_ENABLED
   # anyenv

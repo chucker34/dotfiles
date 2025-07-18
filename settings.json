@@ -30,8 +30,16 @@
   },
   "hooks": {
     "Stop": [{
-      "matcher": "",
-      "hooks": [{"type": "command", "command": "afplay /System/Library/Sounds/Glass.aiff"}]
+      "hooks": [
+        {"type": "command", "command": "osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\" subtitle \"作業が正常に完了しました\"'"},
+        {"type": "command", "command": "afplay /System/Library/Sounds/Glass.aiff"}
+      ]
+    }],
+    "Notification": [{
+      "hooks": [
+        {"type": "command", "command": "osascript -e 'display notification \"Claude Codeが確認を求めています\" with title \"Claude Code\" subtitle \"作業の確認が必要です\"'"},
+        {"type": "command", "command": "afplay /System/Library/Sounds/Hero.aiff"}
+      ]
     }]
   }
 }

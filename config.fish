@@ -32,8 +32,8 @@ eval (direnv hook fish)
 
 set -x PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" $PATH
 
-# pipx binaries
-set -x PATH "/Users/takahirokawakami/.local/bin" $PATH
+# claude code
+# set -x CLAUDE_CODE_MAX_OUTPUT_TOKENS 50000
 
 # devbox shellが起動してない場合はPATHを通す
 if not test $DEVBOX_SHELL_ENABLED
@@ -53,4 +53,7 @@ if not test $DEVBOX_SHELL_ENABLED
   set -x ANDROID_AVD_HOME ~/.android/avd
   set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
 end
+
+# pipx / claude code standalone (~/.local/bin をanyenvより優先)
+set -x PATH "/Users/takahirokawakami/.local/bin" $PATH
 

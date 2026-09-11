@@ -19,7 +19,8 @@ end
 set -x COMPOSE_HTTP_TIMEOUT 200
 
 # tmux
-set -x TERM screen-256color
+# TERM は tmux(default-terminal) / ターミナル側に任せる
+# set -x TERM screen-256color
 set -x TMUX_TMPDIR ~/.tmux/tmp
 
 # direnv

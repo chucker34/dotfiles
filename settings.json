@@ -43,6 +43,8 @@
       "Edit(**/secrets/**)",
       "Read(~/.aws/**)",
       "Edit(~/.aws/**)",
+      "Read(~/.ssh/**)",
+      "Edit(~/.ssh/**)",
       "Bash(nc:*)",
       "Bash(psql:*)",
       "Bash(mysql:*)",
@@ -62,6 +64,10 @@
           {
             "type": "command",
             "command": "jq -r '.tool_input.command // \"\"' | grep -qE '\\.aws(/|[^A-Za-z0-9_]|$)' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"~/.aws 配下への参照はユーザー設定でブロックされています\"}}' || true"
+          },
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.command // \"\"' | grep -qE '\\.ssh(/|[^A-Za-z0-9_]|$)' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"~/.ssh 配下への参照はユーザー設定でブロックされています\"}}' || true"
           },
           {
             "type": "command",

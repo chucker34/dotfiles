@@ -103,6 +103,11 @@
     "Notion@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "autoCompactWindow": 400000
+    }
+  },
   "tui": "fullscreen",
   "theme": "dark-daltonized",
   "agentPushNotifEnabled": true,

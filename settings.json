@@ -47,7 +47,10 @@
       "Bash(psql:*)",
       "Bash(mysql:*)",
       "Bash(mongod:*)",
-      "mcp__supabase__execute_sql"
+      "mcp__supabase__execute_sql",
+      "Bash(docker compose config:*)",
+      "Bash(docker inspect:*)",
+      "Bash(docker container inspect:*)"
     ]
   },
   "model": "claude-fable-5[1m]",
@@ -59,6 +62,10 @@
           {
             "type": "command",
             "command": "jq -r '.tool_input.command // \"\"' | grep -qE '\\.aws(/|[^A-Za-z0-9_]|$)' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"~/.aws 配下への参照はユーザー設定でブロックされています\"}}' || true"
+          },
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.command // \"\"' | grep -qE 'printenv|/proc/[^ ]*/environ|docker( compose)? +(config|inspect)|(^|[;&| ])env([ ;&|]|$)' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"環境変数(APIキー等)を表示するコマンドはユーザー設定でブロックされています\"}}' || true"
           }
         ]
       }
